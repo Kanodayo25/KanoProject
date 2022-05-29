@@ -1,0 +1,14 @@
+server:
+  port: 8081
+dubbo:
+  application:
+    name: dubbo-user-provider
+  registry:
+    address: zookeeper://127.0.0.1:2181
+# DataSource Config
+spring:
+      datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://gz-cynosdbmysql-grp-1p0rcqy9.sql.tencentcdb.com:22825
+        username: root
+        password: Kanodayo25
