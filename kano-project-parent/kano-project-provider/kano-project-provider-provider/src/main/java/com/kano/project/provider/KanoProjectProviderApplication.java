@@ -5,18 +5,16 @@ import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableDubbo
 @Slf4j
 @MapperScan(basePackages = {"com.kano.project.provider.mapper"})
-@ComponentScan(basePackages = {"com.kano.project.provider.*"})
-public class KanoProjectProviderApplication extends WebMvcConfigurerAdapter {
+public class KanoProjectProviderApplication {
 
     public static void main(String[] args) {
-        log.info("application.yml enable");
+        log.info("application.properties enable");
         SpringApplication.run(KanoProjectProviderApplication.class,args);
     }
 }
