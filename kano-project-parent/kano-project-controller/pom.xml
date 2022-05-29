@@ -8,5 +8,36 @@
     <artifactId>kano-project-controller</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <artifactId>kano-project-parent</artifactId>
+        <groupId>kano-project-parent</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>kano-project-common</groupId>
+            <artifactId>kano-project-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>Kano-Project-Provider</groupId>
+            <artifactId>kano-project-provider-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>Kano-Project-Provider</groupId>
+            <artifactId>kano-project-provider-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>
