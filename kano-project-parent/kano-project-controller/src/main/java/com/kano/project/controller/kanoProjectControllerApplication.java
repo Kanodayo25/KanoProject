@@ -1,5 +1,7 @@
-package com.kano.project.controller.controller;
+package com.kano.project.controller;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
+import com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,7 +11,10 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
-        DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+        DataSourceTransactionManagerAutoConfiguration.class,
+        DruidDataSourceAutoConfigure.class ,
+        DynamicDataSourceAutoConfiguration.class,
+        HibernateJpaAutoConfiguration.class})
 @Slf4j
 public class kanoProjectControllerApplication {
 

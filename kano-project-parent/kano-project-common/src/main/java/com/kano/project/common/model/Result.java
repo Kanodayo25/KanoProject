@@ -2,8 +2,12 @@ package com.kano.project.common.model;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Result<T> {
+public class Result<T> implements Serializable {
+
+    private static final long serialVersionUID = -590166532168965320L;
 
     public Result(boolean success, int code) {
         this.setSuccess(success);

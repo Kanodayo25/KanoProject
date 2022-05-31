@@ -14,7 +14,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class KanoProjectProviderApplication {
 
     public static void main(String[] args) {
-        log.info("application.properties enable");
         SpringApplication.run(KanoProjectProviderApplication.class,args);
+        log.info("服务启动成功");
     }
 }
