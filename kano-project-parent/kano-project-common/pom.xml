@@ -6,8 +6,99 @@
 
     <groupId>kano-project-common</groupId>
     <artifactId>kano-project-common</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
+
     <dependencies>
+        <!-- es 搜索 -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>${elasticsearch.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>${elasticsearch.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.version}</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>org.apache.logging.log4j</artifactId>
+                    <groupId>log4j-api</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--fastjson-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <!--gson-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring-web.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${validate-api.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.11.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- sharding-jdbc -->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>${sharding-jdbc.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections4}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.2.9.RELEASE</version>
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -26,11 +117,42 @@
             <version>2.9.2</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.dozermapper</groupId>
+            <artifactId>dozer-spring-boot-starter</artifactId>
+            <version>${dozer.version}</version>
+        </dependency>
     </dependencies>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <dozer.version>6.5.0</dozer.version>
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.0</lombok.version>
+        <dozer.version>6.5.0</dozer.version>
+        <swagger.version>2.9.2</swagger.version>
+        <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
+        <mapstruct.version>1.2.0.Final</mapstruct.version>
+        <frxs-fd-dubbo.version>1.0.1-RELEASE</frxs-fd-dubbo.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <springframework.version>3.2.2.RELEASE</springframework.version>
+        <gson.version>2.8.6</gson.version>
+        <spring-web.version>5.2.6.RELEASE</spring-web.version>
+        <cos_api.version>5.6.24</cos_api.version>
+        <apollo-client.version>1.4.0</apollo-client.version>
+        <validate-api.version>2.0.2</validate-api.version>
+        <frxsframework-integration.version>1.0.8</frxsframework-integration.version>
+        <settlement-basic-api.version>1.0.0-SNAPSHOT</settlement-basic-api.version>
+        <kryo.version>4.0.2</kryo.version>
+        <tms.version>9.3.0-SNAPSHOT</tms.version>
+        <sharding-jdbc.version>4.0.0-RC1</sharding-jdbc.version>
+        <druid.version>1.1.21</druid.version>
+        <elasticsearch.version>6.8.10</elasticsearch.version>
+        <jedis.version>3.3.0</jedis.version>
+        <javers.version>5.12.0</javers.version>
+        <log4j2.version>2.17.1</log4j2.version>
+        <commons-collections4>4.4</commons-collections4>
     </properties>
 
 </project>

@@ -42,6 +42,7 @@
         <cos_api.version>5.6.24</cos_api.version>
         <junit.version>4.12</junit.version>
         <spring-boot-strater-test.version>2.7.0</spring-boot-strater-test.version>
+        <swagger.ui.version>2.9.2</swagger.ui.version>
         <!--spring boot的工程版本-->
         <kylin.sdk.version>3.1.0-RELEASE</kylin.sdk.version>
 
@@ -203,6 +204,11 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
         </dependency>
         <dependency>
             <groupId>io.swagger</groupId>

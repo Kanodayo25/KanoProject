@@ -6,11 +6,13 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableDubbo
 @Slf4j
 @MapperScan(basePackages = {"com.kano.project.provider.mapper"})
+@EnableSwagger2
 public class KanoProjectProviderApplication {
 
     public static void main(String[] args) {
