@@ -122,6 +122,12 @@
             <artifactId>dozer-spring-boot-starter</artifactId>
             <version>${dozer.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -153,6 +159,7 @@
         <javers.version>5.12.0</javers.version>
         <log4j2.version>2.17.1</log4j2.version>
         <commons-collections4>4.4</commons-collections4>
+        <dubbo.version>2.7.4.1</dubbo.version>
     </properties>
 
 </project>
