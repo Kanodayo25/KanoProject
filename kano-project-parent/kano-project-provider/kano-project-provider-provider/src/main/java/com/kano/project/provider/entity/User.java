@@ -3,6 +3,7 @@ package com.kano.project.provider.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.javers.core.metamodel.annotation.Id;
 
 import java.io.Serializable;
 

@@ -43,6 +43,7 @@
         <junit.version>4.12</junit.version>
         <spring-boot-strater-test.version>2.7.0</spring-boot-strater-test.version>
         <swagger.ui.version>2.9.2</swagger.ui.version>
+        <mysql.version>8.0.20</mysql.version>
         <!--spring boot的工程版本-->
         <kylin.sdk.version>3.1.0-RELEASE</kylin.sdk.version>
 
@@ -106,6 +107,19 @@
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.3</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis-spring-boot-starter</artifactId>
+                    <groupId>org.mybatis.spring.boot</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--mysql jdbc-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
 
 
@@ -160,6 +174,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>${spring-boot-strater-test.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-test</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!--配置文件加密-->
@@ -197,28 +217,13 @@
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.version}</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-annotations</artifactId>
-            <version>${swagger.dep.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.swagger</groupId>
-            <artifactId>swagger-models</artifactId>
-            <version>${swagger.dep.version}</version>
+            <version>${swagger.version}</version>
         </dependency>
         <!-- 腾讯云Cos -->
         <dependency>
