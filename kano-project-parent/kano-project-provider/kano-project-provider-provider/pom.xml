@@ -5,7 +5,7 @@
     <parent>
         <artifactId>kano-project-provider</artifactId>
         <groupId>Kano-Project-Provider</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -23,12 +23,12 @@
         <dependency>
             <groupId>kano-project-common</groupId>
             <artifactId>kano-project-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>Kano-Project-Provider</groupId>
             <artifactId>kano-project-provider-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
         <!-- 集成MySQL连接 -->
         <dependency>
