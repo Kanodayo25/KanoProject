@@ -217,12 +217,12 @@
             <version>1.18.24</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -340,7 +340,7 @@
         <jedis.version>3.3.0</jedis.version>
         <javers.version>5.12.0</javers.version>
         <log4j2.version>2.17.1</log4j2.version>
-        <commons-collections4>4.4</commons-collections4>
+        <commons-collections4>4.1</commons-collections4>
         <dubbo.version>2.7.3</dubbo.version>
     </properties>
 
