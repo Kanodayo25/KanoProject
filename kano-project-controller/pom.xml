@@ -14,53 +14,69 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
+    <properties>
+        <!--sa-token-->
+        <sa.token.version>1.34.0</sa.token.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swagger.dep.version>1.5.21</swagger.dep.version>
+
+        <kano-project-common-version>1.0.0-SNAPSHOT</kano-project-common-version>
+        <kano-project-project-version>1.0.0-SNAPSHOT</kano-project-project-version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>kano-project-common</groupId>
             <artifactId>kano-project-common</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${kano-project-common-version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>fastjson</artifactId>
                     <groupId>com.alibaba</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>Kano-Project-Provider</groupId>
+            <artifactId>kano-project-provider-api</artifactId>
+            <version>${kano-project-project-version}</version>
+            <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                    <groupId>com.baomidou</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>2.3.0.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>Kano-Project-Provider</groupId>
-            <artifactId>kano-project-provider-api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-starter-test</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-test</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
+
         <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.curator</groupId>
-            <artifactId>curator-framework</artifactId>
+                <artifactId>curator-framework</artifactId>
             <version>2.8.0</version>
             <exclusions>
                 <exclusion>
@@ -69,6 +85,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
@@ -79,6 +96,13 @@
                     <artifactId>guava</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- sa-token -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>${sa.token.version}</version>
         </dependency>
     </dependencies>
 

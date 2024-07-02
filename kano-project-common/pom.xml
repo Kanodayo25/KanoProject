@@ -154,7 +154,7 @@
             </exclusions>
         </dependency>
 
-        <!-- sharding-jdbc -->
+        <!--&lt;!&ndash; sharding-jdbc &ndash;&gt;
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
@@ -170,23 +170,7 @@
                     <groupId>org.apache.commons</groupId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>${druid.version}</version>
-            <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-api</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-core</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
         <dependency>
@@ -194,7 +178,8 @@
             <artifactId>commons-collections4</artifactId>
             <version>${commons-collections4}</version>
         </dependency>
-        <dependency>
+
+        <!--<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>5.2.9.RELEASE</version>
@@ -209,7 +194,7 @@
                 </exclusion>
             </exclusions>
             <optional>true</optional>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -229,10 +214,6 @@
             <version>2.9.2</version>
             <scope>compile</scope>
             <exclusions>
-                <exclusion>
-                    <artifactId>guava</artifactId>
-                    <groupId>com.google.guava</groupId>
-                </exclusion>
                 <exclusion>
                     <artifactId>slf4j-api</artifactId>
                     <groupId>org.slf4j</groupId>
@@ -261,14 +242,6 @@
             <version>${dozer.version}</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>jcl-over-slf4j</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>slf4j-api</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>spring-boot-autoconfigure</artifactId>
                     <groupId>org.springframework.boot</groupId>
                 </exclusion>
@@ -292,10 +265,6 @@
             <version>${dubbo.version}</version>
             <scope>compile</scope>
             <exclusions>
-                <exclusion>
-                    <artifactId>gson</artifactId>
-                    <groupId>com.google.code.gson</groupId>
-                </exclusion>
                 <exclusion>
                     <artifactId>spring-aop</artifactId>
                     <groupId>org.springframework</groupId>
@@ -322,7 +291,6 @@
         <swagger.version>2.9.2</swagger.version>
         <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
         <mapstruct.version>1.2.0.Final</mapstruct.version>
-        <frxs-fd-dubbo.version>1.0.1-RELEASE</frxs-fd-dubbo.version>
         <fastjson.version>1.2.83</fastjson.version>
         <springframework.version>3.2.2.RELEASE</springframework.version>
         <gson.version>2.8.6</gson.version>

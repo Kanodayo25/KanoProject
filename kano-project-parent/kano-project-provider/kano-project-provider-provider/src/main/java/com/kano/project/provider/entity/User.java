@@ -1,11 +1,16 @@
 package com.kano.project.provider.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Lombok;
 import lombok.NoArgsConstructor;
 import org.javers.core.metamodel.annotation.Id;
 
 import java.io.Serializable;
+import java.lang.reflect.Type;
 
 /**
  * (User)实体类
@@ -21,11 +26,13 @@ public class User implements Serializable {
     /**
     * 主键id
     */
+    @TableId(type = IdType.ASSIGN_ID)
     private Long userid;
     /**
     * 用户名
     */
-    private String username;
+    @TableField(value = "userName")
+    private String userName;
 
 
 }
