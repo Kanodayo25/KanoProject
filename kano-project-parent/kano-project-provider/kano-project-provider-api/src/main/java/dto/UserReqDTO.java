@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -17,5 +18,35 @@ public class UserReqDTO implements Serializable {
     /**
      * 用户名
      */
-    private String username;
+    private String userName;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 账号
+     */
+    private String userAccount;
+
+    /**
+     * 密码
+     */
+    private String userPassword;
+
+    /**
+     * 是否删除
+     */
+    private Boolean del;
+
+    /**
+     * 创建时间
+     */
+    private Date createdTime;
+
+    /**
+     * 修改时间
+     */
+    private Date updatedTime;
 }

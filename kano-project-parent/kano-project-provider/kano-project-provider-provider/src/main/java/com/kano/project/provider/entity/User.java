@@ -11,6 +11,7 @@ import org.javers.core.metamodel.annotation.Id;
 
 import java.io.Serializable;
 import java.lang.reflect.Type;
+import java.util.Date;
 
 /**
  * (User)实体类
@@ -33,6 +34,36 @@ public class User implements Serializable {
     */
     @TableField(value = "userName")
     private String userName;
+
+    /**
+     * 账号
+     */
+    @TableField(value = "userAccount")
+    private String userAccount;
+
+    /**
+     * 密码
+     */
+    @TableField(value = "userPassword")
+    private String userPassword;
+
+    /**
+     * 是否删除
+     */
+    @TableField(value = "del")
+    private Boolean del;
+
+    /**
+     * 创建时间
+     */
+    @TableField(value = "createdTime")
+    private Date createdTime;
+
+    /**
+     * 修改时间
+     */
+    @TableField(value = "updatedTime")
+    private Date updatedTime;
 
 
 }

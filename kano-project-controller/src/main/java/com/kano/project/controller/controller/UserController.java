@@ -1,5 +1,6 @@
 package com.kano.project.controller.controller;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.kano.project.common.model.Result;
 import com.kano.project.controller.controller.vo.InsertUserReqVO;
 import dto.UserReqDTO;
@@ -17,7 +18,7 @@ import service.UserService;
 
 import javax.validation.Valid;
 
-@Api(tags = "用户中心" ,value = "user")
+@Api(tags = "用户中心", value = "user")
 @RestController
 @RequestMapping("/user")
 @Validated
@@ -26,6 +27,19 @@ public class UserController {
 
     @Reference
     private UserService userService;
+
+    @ApiOperation("登陆")
+    @PostMapping("/login")
+    public Result login(@RequestBody @Valid UserReqDTO userReqDTO) {
+        //1.账号密码正确性
+        Result<Long> loginInResult = userService.loginIn(userReqDTO);
+        if(!loginInResult.isSuccess()){
+            return Result.fail(loginInResult.getMsg());
+        }
+        //2.登陆信息写入
+        StpUtil.login(loginInResult.getData());
+        return Result.success("登陆成功");
+    }
 
     @ApiOperation("新增用户")
     @PostMapping("/insertUser")
