@@ -1,21 +1,28 @@
 package dubboImplTest;
 
+import com.kano.project.common.filter.MybatisPlusSqlFilter;
+import com.kano.project.common.helper.SpringApplicationHelper;
 import com.kano.project.common.model.Result;
 import com.kano.project.provider.KanoProjectProviderApplication;
+import com.kano.project.provider.dubboImpl.UserServiceImpl;
 import dto.UserReqDTO;
+import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = KanoProjectProviderApplication.class)
-public class UserServiceImpl {
+public class UserServiceImplTest {
+
 
     @Resource
-    private com.kano.project.provider.dubboImpl.UserServiceImpl service;
+    private UserServiceImpl service;
 
     @Test
     public void userTest(){
@@ -26,7 +33,12 @@ public class UserServiceImpl {
     @Test
     public void insertTest(){
         UserReqDTO reqDTO = new UserReqDTO();
-        reqDTO.setUsername("曹老师");
+        reqDTO.setUserName("ca");
+        reqDTO.setUserAccount("ylt8410407");
+        reqDTO.setUserPassword("123456");
+
+        ApplicationContext applicationContext = SpringApplicationHelper.getApplicationContext();
+        MybatisPlusSqlFilter bean = applicationContext.getBean(MybatisPlusSqlFilter.class);
         Result<Boolean> booleanResult = service.insetUser(reqDTO);
         System.out.println(booleanResult);
     }

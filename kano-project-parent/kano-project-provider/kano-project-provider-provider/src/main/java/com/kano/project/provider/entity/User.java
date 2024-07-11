@@ -1,5 +1,6 @@
 package com.kano.project.provider.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -11,6 +12,7 @@ import org.javers.core.metamodel.annotation.Id;
 
 import java.io.Serializable;
 import java.lang.reflect.Type;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -56,14 +58,14 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
-    @TableField(value = "createdTime")
-    private Date createdTime;
+    @TableField(value = "createdTime",fill = FieldFill.INSERT)
+    private LocalDateTime createdTime;
 
     /**
      * 修改时间
      */
-    @TableField(value = "updatedTime")
-    private Date updatedTime;
+    @TableField(value = "updatedTime",fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updatedTime;
 
 
 }

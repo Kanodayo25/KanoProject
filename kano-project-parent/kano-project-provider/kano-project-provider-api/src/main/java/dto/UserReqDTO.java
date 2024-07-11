@@ -21,11 +21,6 @@ public class UserReqDTO implements Serializable {
     private String userName;
 
     /**
-     * 密码
-     */
-    private String password;
-
-    /**
      * 账号
      */
     private String userAccount;
