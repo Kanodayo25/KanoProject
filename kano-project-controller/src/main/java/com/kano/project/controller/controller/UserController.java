@@ -41,6 +41,7 @@ public class UserController {
         return Result.success("登陆成功");
     }
 
+
     @ApiOperation("新增用户")
     @PostMapping("/insertUser")
     public Result<Boolean> insertUser(@RequestBody @Valid InsertUserReqVO reqVO){
