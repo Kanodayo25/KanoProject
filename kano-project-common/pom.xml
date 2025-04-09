@@ -199,7 +199,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>1.18.36</version>
             <scope>compile</scope>
         </dependency>
         <!--<dependency>
@@ -304,7 +304,6 @@
         <maven.compiler.target>8</maven.compiler.target>
         <dozer.version>6.5.0</dozer.version>
         <java.version>1.8</java.version>
-        <lombok.version>1.18.0</lombok.version>
         <dozer.version>6.5.0</dozer.version>
         <swagger.version>2.9.2</swagger.version>
         <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
