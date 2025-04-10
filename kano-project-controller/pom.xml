@@ -38,6 +38,14 @@
                     <artifactId>spring-web</artifactId>
                     <groupId>org.springframework</groupId>
                 </exclusion>
+                <exclusion>
+                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                    <groupId>com.baomidou</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>datasource-decorator-spring-boot-autoconfigure</artifactId>
+                    <groupId>com.github.gavlyukovskiy</groupId>
+                </exclusion>
             </exclusions>
         </dependency>
 
