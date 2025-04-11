@@ -18,4 +18,14 @@ public class InsertUserReqVO implements Serializable {
      * 用户名
      */
     private String userName;
+
+    /**
+     * 账号
+     */
+    private String userAccount;
+
+    /**
+     * 密码
+     */
+    private String userPassword;
 }

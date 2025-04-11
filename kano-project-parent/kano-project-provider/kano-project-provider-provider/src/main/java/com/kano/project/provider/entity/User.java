@@ -56,6 +56,12 @@ public class User implements Serializable {
     private Boolean del;
 
     /**
+     * 是否登录
+     */
+    @TableField(value = "isLogin")
+    private Boolean isLogin;
+
+    /**
      * 创建时间
      */
     @TableField(value = "createdTime",fill = FieldFill.INSERT)

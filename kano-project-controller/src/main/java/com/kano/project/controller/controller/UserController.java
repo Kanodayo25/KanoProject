@@ -28,19 +28,6 @@ public class UserController {
     @Reference
     private UserService userService;
 
-    @ApiOperation("登陆")
-    @PostMapping("/login")
-    public Result login(@RequestBody @Valid UserReqDTO userReqDTO) {
-        //1.账号密码正确性
-        Result<Long> loginInResult = userService.loginIn(userReqDTO);
-        if(!loginInResult.isSuccess()){
-            return Result.fail(loginInResult.getMsg());
-        }
-        //2.登陆信息写入
-        StpUtil.login(loginInResult.getData());
-        return Result.success("登陆成功");
-    }
-
 
     @ApiOperation("新增用户")
     @PostMapping("/insertUser")

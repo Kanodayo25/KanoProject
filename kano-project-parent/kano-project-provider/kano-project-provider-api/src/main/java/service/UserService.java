@@ -2,6 +2,7 @@ package service;
 
 import com.kano.project.common.model.Result;
 import dto.UserReqDTO;
+import dto.UserResDTO;
 
 /**
  * @author kano
@@ -17,10 +18,12 @@ public interface UserService {
      */
     Result<Boolean> insetUser(UserReqDTO reqDTO);
 
+
     /**
-     * 登陆
-     * @param reqDTO
-     * @return 返回用户id
+     * 用户账号密码验证
+     * @param userAccount
+     * @param userPassword
+     * @return
      */
-    Result<Long> loginIn(UserReqDTO reqDTO);
+    Result<UserResDTO> userCorrectCheckAndLogin(String userAccount,String userPassword);
 }
