@@ -1,5 +1,7 @@
 package com.kano.project.provider.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +16,7 @@ public class Role implements Serializable {
     /**
      * 菜单权限id
      */
+    @TableId(type = IdType.ASSIGN_ID)
     private Long roleId;
 
     /**
