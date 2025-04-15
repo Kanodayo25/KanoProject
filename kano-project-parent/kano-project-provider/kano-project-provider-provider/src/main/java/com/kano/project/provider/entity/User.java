@@ -34,19 +34,19 @@ public class User implements Serializable {
     /**
     * 用户名
     */
-    @TableField(value = "userName")
+    @TableField(value = "user_name")
     private String userName;
 
     /**
      * 账号
      */
-    @TableField(value = "userAccount")
+    @TableField(value = "user_account")
     private String userAccount;
 
     /**
      * 密码
      */
-    @TableField(value = "userPassword")
+    @TableField(value = "user_password")
     private String userPassword;
 
     /**
@@ -58,19 +58,19 @@ public class User implements Serializable {
     /**
      * 是否登录
      */
-    @TableField(value = "isLogin")
+    @TableField(value = "is_login")
     private Boolean isLogin;
 
     /**
      * 创建时间
      */
-    @TableField(value = "createdTime",fill = FieldFill.INSERT)
+    @TableField(value = "created_time",fill = FieldFill.INSERT)
     private LocalDateTime createdTime;
 
     /**
      * 修改时间
      */
-    @TableField(value = "updatedTime",fill = FieldFill.INSERT_UPDATE)
+    @TableField(value = "updated_time",fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updatedTime;
 
 
