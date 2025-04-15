@@ -20,17 +20,22 @@ public class Role implements Serializable {
     private Long roleId;
 
     /**
-     * 父菜单权限id
+     * 用户id
      */
-    private Long roleParentId;
+    private Long userId;
 
     /**
-     * 菜单权限名（英文id）
+     * 角色类型
      */
-    private String roleName;
+    private String roleType;
 
     /**
-     * 菜单权限描述（中文描述）
+     * 菜单权限集合（英文标识）
      */
-    private String roleDesc;
+    private String roleList;
+
+    /**
+     * 菜单权限集合（中文描述）
+     */
+    private String roleListDesc;
 }

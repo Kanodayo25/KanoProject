@@ -251,6 +251,13 @@
             <artifactId>cos_api</artifactId>
             <version>${cos_api.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-core</artifactId>
+            <version>1.38.0</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 
