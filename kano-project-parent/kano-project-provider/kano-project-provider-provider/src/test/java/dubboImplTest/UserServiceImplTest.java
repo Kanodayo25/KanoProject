@@ -6,6 +6,7 @@ import com.kano.project.common.model.Result;
 import com.kano.project.provider.KanoProjectProviderApplication;
 import com.kano.project.provider.dubboImpl.UserServiceImpl;
 import dto.UserReqDTO;
+import dto.UserResDTO;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -41,5 +42,11 @@ public class UserServiceImplTest {
         MybatisPlusSqlFilter bean = applicationContext.getBean(MybatisPlusSqlFilter.class);
         Result<Boolean> booleanResult = service.insetUser(reqDTO);
         System.out.println(booleanResult);
+    }
+
+    @Test
+    public void loginTest(){
+        Result<UserResDTO> userResDTOResult = service.userCorrectCheckAndLogin("17763731121", "Liuao5014.");
+        System.out.println(userResDTOResult);
     }
 }
