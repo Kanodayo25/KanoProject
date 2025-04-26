@@ -39,6 +39,13 @@ public class SaTokenController {
         return Result.success("登陆成功");
     }
 
+    @ApiOperation("测试")
+    @PostMapping("/test")
+    public Result<String> test() {
+
+        return Result.success("1111");
+    }
+
     private UserResDTO UserCorrectCheck(String account,String password) {
         boolean isLoginFlag = StpUtil.isLogin();
         if(!isLoginFlag){
