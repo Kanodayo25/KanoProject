@@ -40,9 +40,8 @@ public class SaTokenController {
     }
 
     @ApiOperation("测试")
-    @PostMapping("/test")
+    @GetMapping("/test")
     public Result<String> test() {
-
         return Result.success("1111");
     }
 
