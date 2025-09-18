@@ -308,6 +308,12 @@
             <artifactId>p6spy-spring-boot-starter</artifactId>
             <version>${p6spy.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.3</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>
