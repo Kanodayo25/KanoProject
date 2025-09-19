@@ -1,4 +1,4 @@
-package com.kano.project.controller.factory;
+package com.kano.project.common.factory;
 
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.BaseRowModel;
