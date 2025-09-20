@@ -29,10 +29,34 @@ public class OutpatientDepartmentImportVO extends BaseRowModel {
     @ExcelProperty(value = "患者姓名")
     private String patientName;
 
-    @ExcelProperty(value = "病历合格标记")
+    @ExcelProperty(value = "主诉低于4字")
+    private String chiefComplainLow4Flag;
+
+    @ExcelProperty(value = "现病史低于10字")
+    private String currentIllnessLow10Flag;
+
+    @ExcelProperty(value = "过敏史为空")
+    private String allergiesNullFlag;
+
+    @ExcelProperty(value = "既往史为空")
+    private String pastIllnessNullFlag;
+
+    @ExcelProperty(value = "体格检查低于8字")
+    private String physicalExamLow8Flag;
+
+    @ExcelProperty(value = "初步诊断为空")
+    private String preliminaryDiagnosisNullFlag;
+
+    @ExcelProperty(value = "治疗意见低于4字")
+    private String preliminaryDiagnosisLow4Flag;
+
+    @ExcelProperty(value = "病历合格数")
     private String qualifiedCaseFlag;
 
-    @ExcelProperty(value = "科室剔除标记")
+    @ExcelProperty(value = "不合格项目数")
+    private String noneQualifiedCaseFlag;
+
+    @ExcelProperty(value = "质控科室抽查标识")
     private String departmentKickFlag;
 
 

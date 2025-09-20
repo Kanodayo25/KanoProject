@@ -1,8 +1,9 @@
 package com.kano.project.controller.controller;
 
 import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelWriter;
+import com.alibaba.excel.write.metadata.WriteSheet;
 import com.kano.project.common.utils.DateUtils;
-import com.kano.project.common.utils.EasyExcelUtils;
 import com.kano.project.common.utils.ExcelUtil;
 import com.kano.project.controller.controller.vo.OutPatientDepartmentExportVO;
 import com.kano.project.controller.controller.vo.OutpatientDepartmentImportVO;
@@ -20,7 +21,6 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -36,7 +36,7 @@ public class InformationController {
     private double qualifiedPercent;
 
     //非剔除科室
-    private final String NOT_KICK_FLAG = "0";
+    private final String NOT_KICK_FLAG = "1";
 
     //病例合格标记
     private final String PATIENT_TRUE_FLAG = "1";
@@ -46,6 +46,9 @@ public class InformationController {
 
     //补充调整数值(将样本量限制为5的倍数)
     private final int multiple = 5;
+
+    //sheet2筛选完的数据
+    private List<OutpatientDepartmentImportVO> filtedOriginalDataVos = new ArrayList<>();
 
     @ApiOperation("门诊课月度门诊质量信息梳理导出")
     @GetMapping("/OutpatientDepartmentImport")
@@ -67,6 +70,15 @@ public class InformationController {
         List<OutPatientDepartmentExportVO> exportVos =  outCalculateExportData(groupedDataList);
 
         //导出excel
+        ExportExcel(exportVos,filtedOriginalDataVos,response);
+
+    }
+
+    /**
+     * 导出Excel
+     * @param exportVos 导出数据
+     */
+    private void ExportExcel(List<OutPatientDepartmentExportVO> exportVos,List<OutpatientDepartmentImportVO> exportOriginVos, HttpServletResponse response) throws IOException {
         Date date = DateUtils.currDate();
         Integer year = DateUtils.getYear(date);
         Integer month = DateUtils.getMonth(date);
@@ -75,9 +87,18 @@ public class InformationController {
         response.setCharacterEncoding("utf-8");
         response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
         ServletOutputStream outputStream = response.getOutputStream();
-        EasyExcel.write(outputStream,OutPatientDepartmentExportVO.class)
-                .sheet("sheet1")
-                        .doWrite(exportVos);
+        ExcelWriter excelWriter = EasyExcel.write(fileName).build();
+        WriteSheet writeSheetOne = EasyExcel.writerSheet(1,"抽查统计表")
+                .head(OutPatientDepartmentExportVO.class).build();
+        excelWriter.write(exportVos,writeSheetOne);
+
+        WriteSheet writeSheetTwo = EasyExcel.writerSheet(2,"抽查原始数据筛选表")
+                .head(OutpatientDepartmentImportVO.class).build();
+        excelWriter.write(exportOriginVos,writeSheetTwo);
+        excelWriter.finish();
+        /*EasyExcel.write(outputStream, OutPatientDepartmentExportVO.class)
+                .sheet("抽查统计表")
+                .doWrite(exportVos);*/
     }
 
 
@@ -109,6 +130,8 @@ public class InformationController {
             //组装反参
             resVO = BuildResVO(dataAfterPercent,key);
             resVOs.add(resVO);
+            //将筛选的原始数据提出
+            filtedOriginalDataVos.addAll(dataAfterPercent);
         });
         return resVOs;
     }
