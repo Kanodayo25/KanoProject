@@ -42,7 +42,10 @@ public class InformationController {
     private final String PATIENT_TRUE_FLAG = "1";
 
     //总抽样份数
-    private Integer totalPatientAfterPercent = 0;
+    private int totalPatientAfterPercent = 0;
+
+    //补充调整数值(将样本量限制为5的倍数)
+    private final int multiple = 5;
 
     @ApiOperation("门诊课月度门诊质量信息梳理导出")
     @GetMapping("/OutpatientDepartmentImport")
@@ -95,6 +98,10 @@ public class InformationController {
             //根据百分比获取抽取样本量
             BigDecimal mid = BigDecimal.valueOf(patientSum * qualifiedPercent);
             int patientSumAfterPercent = mid.setScale(0, RoundingMode.CEILING).intValue();
+                //将抽取样本量取为5的倍数,向上取
+            if(patientSumAfterPercent % multiple != 0){
+                patientSumAfterPercent = ((patientSumAfterPercent + multiple) / multiple) * multiple;
+            }
             //打乱列表顺序
             Collections.shuffle(itemList);
             //抽取数据
@@ -130,9 +137,9 @@ public class InformationController {
         long count = dataAfterPercent.stream().filter(e ->
             PATIENT_TRUE_FLAG.compareTo(e.getQualifiedCaseFlag()) == 0
         ).count();
-        resVO.setTruePatientTotal(String.valueOf(count)+"份");
+        resVO.setTruePatientTotal(String.valueOf(count));
         //不合格份数
-        resVO.setFalsePatientTotal(String.valueOf((long) dataAfterPercent.size() -count)+"份");
+        resVO.setFalsePatientTotal(String.valueOf((long) dataAfterPercent.size() -count));
         return resVO;
     }
 }
