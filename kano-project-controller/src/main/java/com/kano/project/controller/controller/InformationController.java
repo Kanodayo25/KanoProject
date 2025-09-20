@@ -130,9 +130,9 @@ public class InformationController {
         long count = dataAfterPercent.stream().filter(e ->
             PATIENT_TRUE_FLAG.compareTo(e.getQualifiedCaseFlag()) == 0
         ).count();
-        resVO.setTruePatientTotal(String.valueOf(count));
+        resVO.setTruePatientTotal(String.valueOf(count)+"份");
         //不合格份数
-        resVO.setFalsePatientTotal(String.valueOf((long) dataAfterPercent.size() -count));
+        resVO.setFalsePatientTotal(String.valueOf((long) dataAfterPercent.size() -count)+"份");
         return resVO;
     }
 }
