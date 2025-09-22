@@ -203,7 +203,7 @@ public class InformationController {
         //科室名
         resVO.setDepartmentName(departmentName);
         //抽查病例份数
-        resVO.setPatientTotalNum(String.valueOf(dataAfterPercent.size())+"份");
+        resVO.setPatientTotalNum(dataAfterPercent.size()+"份");
         //汇总抽样病例数，统计总数
         totalPatientAfterPercent += dataAfterPercent.size();
         //单号
