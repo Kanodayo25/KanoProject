@@ -68,6 +68,7 @@ public class InformationController {
         //去除带剔除标识的数据
         List<OutpatientDepartmentImportVO> filterImportDataList = importDataList.stream().filter(e -> StringUtils.isNotEmpty(e.getDepartmentKickFlag()))
                 .collect(Collectors.toList());
+
         //将门诊数据按科室分组
         Map<String, List<OutpatientDepartmentImportVO>> groupedDataList = filterImportDataList.stream().collect(Collectors.groupingBy(OutpatientDepartmentImportVO::getDepartmentName));
 
