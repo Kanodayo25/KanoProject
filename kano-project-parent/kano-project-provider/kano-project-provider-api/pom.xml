@@ -30,7 +30,7 @@
         </dependency>
     </dependencies>
 
-    <!-- 打包插件 -->
+    <!--&lt;!&ndash; 打包插件 &ndash;&gt;
     <build>
         <plugins>
             <plugin>
@@ -52,5 +52,5 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
