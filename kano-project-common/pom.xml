@@ -315,10 +315,17 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>cos_api</artifactId>
+            <version>${tencent.cos.api}</version>
+        </dependency>
+
 
     </dependencies>
 
     <properties>
+        <tencent.cos.api>5.6.227</tencent.cos.api>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <dozer.version>6.5.0</dozer.version>

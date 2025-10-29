@@ -21,7 +21,7 @@ import javax.validation.constraints.NotNull;
 @Slf4j
 public class SaTokenController {
 
-    @Reference
+    @Reference(url = "dubbo://175.178.101.42:20880")
     private UserService userService;
 
     @ApiOperation("登陆")
