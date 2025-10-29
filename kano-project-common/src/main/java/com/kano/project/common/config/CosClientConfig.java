@@ -13,16 +13,13 @@ import org.springframework.context.annotation.Configuration;
 public class CosClientConfig {
 
     // 上文获得的SecretId
-    @Value(value = "${cos.secret.id}")
-    private static String secretId;
+    private static String secretId = "AKIDzqZ6VlqjR2VnxypUbdXFnANPGpFWcWGr";
 
     // 上文获得的SecretKey
-    @Value(value = "${cos.secret.key}")
-    private static String secretKey;
+    private static String secretKey = "VoeQ1TkpnaosmaUN4dIpAKI3g7MRJ0Um";
 
     //cos地址
-    @Value(value = "${cos.region.address}")
-    private static String cosAddress;
+    private static String cosAddress = "ap-guangzhou";
 
     public static COSClient getCosClient(){
         // 1 初始化用户身份信息（secretId, secretKey）。

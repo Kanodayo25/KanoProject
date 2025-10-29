@@ -15,11 +15,11 @@ import static com.kano.project.common.config.CosClientConfig.getCosClient;
 
 @Slf4j
 public class CosUtils {
-    @Value(value = "${cos.http.address}")
-    private static String URL;
+    //腾讯云COS服务器外网暴露地址
+    private static String URL = "https://troubleinf-1301296837.cos.ap-guangzhou.myqcloud.com";
 
-    @Value(value = "${cos.bucket.name}")
-    private static String BUCKET_NAME;
+    //腾讯云COS服务器桶名
+    private static String BUCKET_NAME = "troubleinf-1301296837";
 
     //通过文件路径和文件路径，文件保存的地址，后面成为存储桶的key
     public static String getFilePath(String dir,String fileName){
