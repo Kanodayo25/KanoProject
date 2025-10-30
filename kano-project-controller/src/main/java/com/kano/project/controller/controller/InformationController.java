@@ -34,6 +34,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/XXK")
 @Validated
 @Slf4j
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class InformationController {
 
     //抽取百分比
