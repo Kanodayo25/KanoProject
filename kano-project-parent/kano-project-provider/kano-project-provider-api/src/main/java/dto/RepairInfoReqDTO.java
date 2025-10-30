@@ -5,10 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RepairInfoReqDTO extends Page {
+public class RepairInfoReqDTO extends Page implements Serializable {
+    private static final long serialVersionUID = 111111111L;
     private Long id;
     //错误类型(0:硬件 1:网络 2:HIS 3:EMR 4:平台 5:其他)
     private Integer type;
