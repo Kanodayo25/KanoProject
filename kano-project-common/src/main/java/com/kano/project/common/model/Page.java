@@ -8,6 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Page {
-    private Long pageSize;
-    private Long page;
+    private Long pageSize = 20L;
+    private Long page = 1L;
 }
