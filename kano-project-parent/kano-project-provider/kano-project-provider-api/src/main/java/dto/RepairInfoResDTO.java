@@ -1,5 +1,6 @@
 package dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class RepairInfoResDTO implements Serializable {
     private static final long serialVersionUID = 111111111L;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
     //错误类型(0:硬件 1:网络 2:HIS 3:EMR 4:平台 5:其他)
     private Integer type;
