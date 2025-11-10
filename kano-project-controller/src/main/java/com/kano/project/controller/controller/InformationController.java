@@ -47,17 +47,20 @@ public class InformationController {
     private final String PATIENT_TRUE_FLAG = "1";
 
     //总抽样份数
-    private int totalPatientAfterPercent = 0;
+    private int totalPatientAfterPercent;
 
     //补充调整数值(将样本量限制为5的倍数)
     private final int multiple = 5;
 
     //sheet2筛选完的数据
-    private List<OutpatientDepartmentImportVO> filtedOriginalDataVos = new ArrayList<>();
+    private List<OutpatientDepartmentImportVO> filtedOriginalDataVos;
 
     @ApiOperation("门诊课月度门诊质量信息梳理导出")
     @GetMapping("/OutpatientDepartmentImport")
     public void OutpatientDepartmentImport(@RequestParam("file") MultipartFile file, HttpServletResponse response) throws IOException {
+        //初始化
+        filtedOriginalDataVos = new ArrayList<>();
+        totalPatientAfterPercent = 0;
         //导入Excel获取数据
         OutpatientDepartmentImportVO importVOs = new OutpatientDepartmentImportVO();
         List<Object> importObjs = ExcelUtil.readExcel(file, importVOs);
