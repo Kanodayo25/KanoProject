@@ -1,5 +1,6 @@
 package dto;
 
+import com.alibaba.excel.annotation.format.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
 
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -26,9 +28,11 @@ public class RepairInfoResDTO implements Serializable {
     //处理过程图片，视频地址
     private String dealProcess;
     //创建时间
-    private String createTime;
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date createTime;
     //修改时间
-    private String updatedTime;
+    @JsonFormat(pattern = "yyyy-MM-dd hh:mm:ss")
+    private Date updatedTime;
     //是否疑难
     private Boolean isHard;
 }
