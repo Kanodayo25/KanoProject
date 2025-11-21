@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import service.RepairInfoService;
 
+import java.io.IOException;
+
 @Api(tags = "日常问题", value = "troubleInfo")
 @RestController
 @RequestMapping("/troubleInfo")
@@ -28,7 +30,7 @@ public class TroubleInfoController {
 
     @ApiOperation("上传")
     @PostMapping("/upload")
-    public Result<String> upload(@RequestParam("file") MultipartFile file) {
+    public Result<String> upload(@RequestParam("file") MultipartFile file) throws IOException {
         String resultStr = CosUtils.uploadImg(file);
         return Result.success(resultStr);
     }
