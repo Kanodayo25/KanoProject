@@ -33,7 +33,8 @@ public class CosUtils {
      * @param file 文件对象
      * @return
      */
-    public static String uploadImg(MultipartFile file){
+    public static String uploadImg(MultipartFile file) throws IOException {
+        // 使用单例的COSClient，不要每次都创建和销毁
         COSClient cosClient = getCosClient();
         InputStream inputStream = null;
         try {
@@ -49,10 +50,18 @@ public class CosUtils {
             return URL + "/" + filePath;
         } catch (IOException e) {
             e.printStackTrace();
+            throw e; // 重新抛出异常，便于上层处理
         } finally {
-            cosClient.shutdown();
+            // 不再关闭cosClient，因为它是单例，会一直复用
+            // cosClient.shutdown(); // 删除此行
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    log.error("关闭输入流失败", e);
+                }
+            }
         }
-        return null;
     }
 
 }

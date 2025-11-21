@@ -35,11 +35,7 @@ public class ExcelWriterFactory extends ExcelWriter {
             this.write(list, sheet);
         } catch (Exception ex) {
             ex.printStackTrace();
-            try {
-                outputStream.flush();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            // 异常时不需要flush，在finish中统一处理
         }
         return this;
     }
@@ -48,7 +44,25 @@ public class ExcelWriterFactory extends ExcelWriter {
     public void finish() {
         super.finish();
         try {
-            outputStream.flush();
+            if (outputStream != null) {
+                outputStream.flush();
+                // 注意：不要在这里关闭outputStream，因为它是由外部传入的
+                // 由调用方负责关闭，通常是ServletOutputStream会自动关闭
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 关闭资源，释放内存
+     * 注意：仅在非ServletOutputStream的情况下调用
+     */
+    public void close() {
+        try {
+            if (outputStream != null) {
+                outputStream.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

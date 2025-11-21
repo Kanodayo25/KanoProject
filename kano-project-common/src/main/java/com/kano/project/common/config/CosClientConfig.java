@@ -21,17 +21,39 @@ public class CosClientConfig {
     //cos地址
     private static String cosAddress = "ap-guangzhou";
 
+    // 单例模式：静态内部类实现线程安全的懒加载
+    private static class CosClientHolder {
+        private static final COSClient INSTANCE = createCosClient();
+        
+        private static COSClient createCosClient() {
+            // 1 初始化用户身份信息（secretId, secretKey）。
+            COSCredentials cred = new BasicCOSCredentials(secretId, secretKey);
+            // 2.1 设置存储桶的地域（上文获得）
+            Region region = new Region(cosAddress);
+            ClientConfig clientConfig = new ClientConfig(region);
+            // 2.2 使用https协议传输
+            clientConfig.setHttpProtocol(HttpProtocol.https);
+            // 3 生成 cos 客户端。
+            return new COSClient(cred, clientConfig);
+        }
+    }
+
+    /**
+     * 获取COS客户端单例
+     * 使用单例模式避免频繁创建和销毁客户端，COSClient内部维护连接池，应该复用
+     * @return COS客户端实例
+     */
     public static COSClient getCosClient(){
-        // 1 初始化用户身份信息（secretId, secretKey）。
-        COSCredentials cred = new BasicCOSCredentials(secretId, secretKey);
-        // 2.1 设置存储桶的地域（上文获得）
-        Region region = new Region(cosAddress);
-        ClientConfig clientConfig = new ClientConfig(region);
-        // 2.2 使用https协议传输
-        clientConfig.setHttpProtocol(HttpProtocol.https);
-        // 3 生成 cos 客户端。
-        COSClient cosClient = new COSClient(cred, clientConfig);
-        // 返回COS客户端
-        return cosClient;
+        return CosClientHolder.INSTANCE;
+    }
+
+    /**
+     * 手动关闭COS客户端（仅在应用关闭时调用）
+     * 正常使用时不应该调用此方法
+     */
+    public static void shutdownCosClient() {
+        if (CosClientHolder.INSTANCE != null) {
+            CosClientHolder.INSTANCE.shutdown();
+        }
     }
 }

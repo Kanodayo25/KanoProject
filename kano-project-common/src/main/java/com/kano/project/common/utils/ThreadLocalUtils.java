@@ -34,8 +34,23 @@ public final class ThreadLocalUtils {
         map.putAll(keyValueMap);
     }
 
+    /**
+     * 移除整个ThreadLocal，释放内存
+     * 在请求结束时应该调用此方法，防止内存泄漏
+     */
     public static void remove() {
         threadLocal.remove();
+    }
+
+    /**
+     * 清空ThreadLocal中的所有数据，但不移除ThreadLocal本身
+     * 适用于需要重用ThreadLocal的场景
+     */
+    public static void clearAll() {
+        Map map = threadLocal.get();
+        if (map != null) {
+            map.clear();
+        }
     }
 
     public static <T> Map<String, T> fetchVarsByPrefix(String prefix) {

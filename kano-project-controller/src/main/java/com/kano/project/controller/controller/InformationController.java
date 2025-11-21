@@ -46,21 +46,15 @@ public class InformationController {
     //病例合格标记
     private final String PATIENT_TRUE_FLAG = "1";
 
-    //总抽样份数
-    private int totalPatientAfterPercent;
-
     //补充调整数值(将样本量限制为5的倍数)
     private final int multiple = 5;
-
-    //sheet2筛选完的数据
-    private List<OutpatientDepartmentImportVO> filtedOriginalDataVos;
 
     @ApiOperation("门诊课月度门诊质量信息梳理导出")
     @GetMapping("/OutpatientDepartmentImport")
     public void OutpatientDepartmentImport(@RequestParam("file") MultipartFile file, HttpServletResponse response) throws IOException {
-        //初始化
-        filtedOriginalDataVos = new ArrayList<>();
-        totalPatientAfterPercent = 0;
+        //使用局部变量，避免线程安全问题和内存泄漏
+        List<OutpatientDepartmentImportVO> filtedOriginalDataVos = new ArrayList<>();
+        
         //导入Excel获取数据
         OutpatientDepartmentImportVO importVOs = new OutpatientDepartmentImportVO();
         List<Object> importObjs = ExcelUtil.readExcel(file, importVOs);
@@ -76,18 +70,21 @@ public class InformationController {
         Map<String, List<OutpatientDepartmentImportVO>> groupedDataList = filterImportDataList.stream().collect(Collectors.groupingBy(OutpatientDepartmentImportVO::getDepartmentName));
 
         //进行数据筛选处理，返回需导出数据。
-        List<OutPatientDepartmentExportVO> exportVos =  outCalculateExportData(groupedDataList);
+        ExportDataResult result = outCalculateExportData(groupedDataList, filtedOriginalDataVos);
 
         //导出excel
-        ExportExcel(exportVos, DozerUtils.mapList(filtedOriginalDataVos, OutpatientDepartmentExVO.class),response);
+        ExportExcel(result.getExportVos(), DozerUtils.mapList(filtedOriginalDataVos, OutpatientDepartmentExVO.class), result.getTotalPatientAfterPercent(), response);
 
     }
 
     /**
      * 导出Excel
      * @param exportVos 导出数据
+     * @param exportOriginVos 原始数据
+     * @param totalPatientAfterPercent 总抽样份数
+     * @param response HTTP响应
      */
-    private void ExportExcel(List<OutPatientDepartmentExportVO> exportVos,List<OutpatientDepartmentExVO> exportOriginVos, HttpServletResponse response) throws IOException {
+    private void ExportExcel(List<OutPatientDepartmentExportVO> exportVos, List<OutpatientDepartmentExVO> exportOriginVos, int totalPatientAfterPercent, HttpServletResponse response) throws IOException {
         Date date = DateUtils.currDate();
         Integer year = DateUtils.getYear(date);
         Integer month = DateUtils.getMonth(date);
@@ -96,33 +93,65 @@ public class InformationController {
         response.setCharacterEncoding("utf-8");
         response.setHeader("Content-disposition", "attachment;filename*=utf-8''" + fileName + ".xlsx");
         ServletOutputStream outputStream = response.getOutputStream();
-        ExcelWriter excelWriter = EasyExcel.write(outputStream).inMemory(true).build();
-        WriteSheet writeSheetOne = EasyExcel.writerSheet(1,"抽查统计表")
-                .head(OutPatientDepartmentExportVO.class).build();
-        excelWriter.write(exportVos,writeSheetOne);
+        ExcelWriter excelWriter = null;
+        try {
+            excelWriter = EasyExcel.write(outputStream).inMemory(true).build();
+            WriteSheet writeSheetOne = EasyExcel.writerSheet(1,"抽查统计表")
+                    .head(OutPatientDepartmentExportVO.class).build();
+            excelWriter.write(exportVos,writeSheetOne);
 
-        WriteSheet writeSheetTwo = EasyExcel.writerSheet(2,"抽查原始数据筛选表")
-                .head(OutpatientDepartmentExVO.class).build();
-        excelWriter.write(exportOriginVos,writeSheetTwo);
-        excelWriter.finish();
-        /*EasyExcel.write(outputStream, OutPatientDepartmentExportVO.class)
-                .sheet("抽查统计表")
-                .doWrite(exportVos);*/
+            WriteSheet writeSheetTwo = EasyExcel.writerSheet(2,"抽查原始数据筛选表")
+                    .head(OutpatientDepartmentExVO.class).build();
+            excelWriter.write(exportOriginVos,writeSheetTwo);
+            excelWriter.finish();
+        } finally {
+            // 确保ExcelWriter被关闭，防止资源泄漏
+            if (excelWriter != null) {
+                excelWriter.finish();
+            }
+        }
     }
 
 
     //梳理数据
 
     /**
-     *
-     * @param groupedDataList Excel分组数据
-     * @return
+     * 数据计算结果封装类
      */
-    private List<OutPatientDepartmentExportVO> outCalculateExportData(Map<String, List<OutpatientDepartmentImportVO>> groupedDataList) {
+    private static class ExportDataResult {
+        private List<OutPatientDepartmentExportVO> exportVos;
+        private int totalPatientAfterPercent;
+
+        public ExportDataResult(List<OutPatientDepartmentExportVO> exportVos, int totalPatientAfterPercent) {
+            this.exportVos = exportVos;
+            this.totalPatientAfterPercent = totalPatientAfterPercent;
+        }
+
+        public List<OutPatientDepartmentExportVO> getExportVos() {
+            return exportVos;
+        }
+
+        public int getTotalPatientAfterPercent() {
+            return totalPatientAfterPercent;
+        }
+    }
+
+    /**
+     * 计算并导出数据，使用局部变量避免线程安全问题
+     * @param groupedDataList Excel分组数据
+     * @param filtedOriginalDataVos 筛选后的原始数据列表（输出参数）
+     * @return 导出数据结果
+     */
+    private ExportDataResult outCalculateExportData(Map<String, List<OutpatientDepartmentImportVO>> groupedDataList, List<OutpatientDepartmentImportVO> filtedOriginalDataVos) {
         Random random = new Random();
         List<OutPatientDepartmentExportVO> resVOs = new ArrayList<>();
+        int totalPatientAfterPercent = 0; // 使用局部变量
+        
         //梳理数据
-        groupedDataList.forEach((String key,List<OutpatientDepartmentImportVO> itemList)->{
+        for (Map.Entry<String, List<OutpatientDepartmentImportVO>> entry : groupedDataList.entrySet()) {
+            String key = entry.getKey();
+            List<OutpatientDepartmentImportVO> itemList = entry.getValue();
+            
             OutPatientDepartmentExportVO resVO = new OutPatientDepartmentExportVO();
             //获取单一科室总样本量
             int patientSum = itemList.size();
@@ -168,12 +197,14 @@ public class InformationController {
                 }
             });
             //组装返参
-            resVO = BuildResVO(qualifiedFilterList,key);
+            resVO = BuildResVO(qualifiedFilterList, key, totalPatientAfterPercent);
+            totalPatientAfterPercent += qualifiedFilterList.size(); // 累加总数
             resVOs.add(resVO);
             //将筛选的原始数据提出
             filtedOriginalDataVos.addAll(qualifiedFilterList);
-        });
-        return resVOs;
+        }
+        
+        return new ExportDataResult(resVOs, totalPatientAfterPercent);
     }
 
     /**
@@ -196,20 +227,19 @@ public class InformationController {
 
     //构建返参
     /**
-     *
+     * 构建单个科室的返回数据
      * @param dataAfterPercent 单个科室记录数据
      * @param departmentName 科室名
+     * @param currentTotal 当前已累计的总数（用于日志，不再修改全局变量）
      * @return 单个科室返参
      */
-    private OutPatientDepartmentExportVO BuildResVO(List<OutpatientDepartmentImportVO> dataAfterPercent,String departmentName) {
+    private OutPatientDepartmentExportVO BuildResVO(List<OutpatientDepartmentImportVO> dataAfterPercent, String departmentName, int currentTotal) {
 
         OutPatientDepartmentExportVO resVO = new OutPatientDepartmentExportVO();
         //科室名
         resVO.setDepartmentName(departmentName);
         //抽查病例份数
         resVO.setPatientTotalNum(dataAfterPercent.size()+"份");
-        //汇总抽样病例数，统计总数
-        totalPatientAfterPercent += dataAfterPercent.size();
         //单号
         List<String> patientNumList = dataAfterPercent.stream().map(OutpatientDepartmentImportVO::getOutpatientNum).collect(Collectors.toList());
         resVO.setPatientNumStr(String.join(",",patientNumList));

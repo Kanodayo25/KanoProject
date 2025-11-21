@@ -23,6 +23,7 @@ public class ExcelListener extends AnalysisEventListener {
 
     /**
      * 通过 AnalysisContext 对象还可以获取当前 sheet，当前行等数据
+     * 如数据过大，建议使用分批处理避免内存溢出
      */
     @Override
     public void invoke(Object object, AnalysisContext context) {
@@ -31,13 +32,13 @@ public class ExcelListener extends AnalysisEventListener {
         //根据业务自行 do something
         doSomething();
 
+        // 如数据过大，可以进行定量分批处理，避免内存溢出
+        // 建议：对于超大文件，可以启用以下分批处理逻辑
         /*
-        如数据过大，可以进行定量分批处理
-        if(datas.size()<=100){
-            datas.add(object);
-        }else {
-            doSomething();
-            datas = new ArrayList<Object>();
+        final int BATCH_SIZE = 1000; // 每1000条数据处理一次
+        if(datas.size() >= BATCH_SIZE){
+            doSomething(); // 批量处理数据
+            datas.clear(); // 清空已处理的数据，释放内存
         }
          */
 
@@ -51,10 +52,9 @@ public class ExcelListener extends AnalysisEventListener {
 
     @Override
     public void doAfterAllAnalysed(AnalysisContext context) {
-        /*
-            datas.clear();
-            解析结束销毁不用的资源
-         */
+        // 解析结束销毁不用的资源，防止内存泄漏
+        // 注意：这里不清理datas，因为外部还需要通过getDatas()获取数据
+        // 数据由调用方在使用完毕后负责清理
     }
 
     public List<Object> getDatas() {

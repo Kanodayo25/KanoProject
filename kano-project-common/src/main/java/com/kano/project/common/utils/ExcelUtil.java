@@ -36,13 +36,20 @@ public class ExcelUtil {
         if (reader == null) {
             return null;
         }
-        for (Sheet sheet : reader.getSheets()) {
-            if (rowModel != null) {
-                sheet.setClazz(rowModel.getClass());
+        try {
+            for (Sheet sheet : reader.getSheets()) {
+                if (rowModel != null) {
+                    sheet.setClazz(rowModel.getClass());
+                }
+                reader.read(sheet);
             }
-            reader.read(sheet);
+            return excelListener.getDatas();
+        } finally {
+            // 关闭资源，防止内存泄漏
+            if (reader != null) {
+                reader.finish();
+            }
         }
-        return excelListener.getDatas();
     }
 
     /**
@@ -73,8 +80,15 @@ public class ExcelUtil {
         if (reader == null) {
             return null;
         }
-        reader.read(new Sheet(sheetNo, headLineNum, rowModel.getClass()));
-        return excelListener.getDatas();
+        try {
+            reader.read(new Sheet(sheetNo, headLineNum, rowModel.getClass()));
+            return excelListener.getDatas();
+        } finally {
+            // 关闭资源，防止内存泄漏
+            if (reader != null) {
+                reader.finish();
+            }
+        }
     }
 
     /**
@@ -88,11 +102,19 @@ public class ExcelUtil {
      */
     public static void writeExcel(HttpServletResponse response, List<? extends BaseRowModel> list,
                                   String fileName, String sheetName, BaseRowModel object) {
-        ExcelWriter writer = new ExcelWriter(getOutputStream(fileName, response), ExcelTypeEnum.XLSX);
-        Sheet sheet = new Sheet(1, 0, object.getClass());
-        sheet.setSheetName(sheetName);
-        writer.write(list, sheet);
-        writer.finish();
+        ExcelWriter writer = null;
+        try {
+            writer = new ExcelWriter(getOutputStream(fileName, response), ExcelTypeEnum.XLSX);
+            Sheet sheet = new Sheet(1, 0, object.getClass());
+            sheet.setSheetName(sheetName);
+            writer.write(list, sheet);
+            writer.finish();
+        } finally {
+            // 确保资源被关闭
+            if (writer != null) {
+                writer.finish();
+            }
+        }
     }
 
     /**

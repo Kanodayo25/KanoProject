@@ -74,10 +74,21 @@ public class GlobalExceptionHandler extends ListenableFilter {
 
         @Override
         public void onResponse(Result appResponse, Invoker<?> invoker, Invocation invocation) {
-            // Clear the cache value set by the current thread
-            ThreadLocalUtils.clear("base");
-            ThreadLocalUtils.clear("create");
-            ThreadLocalUtils.clear("update");
+            // 清理ThreadLocal，防止内存泄漏
+            // 使用remove()完全移除ThreadLocal，比清理特定前缀更彻底
+            try {
+                // 原有逻辑保留，清理特定前缀
+                ThreadLocalUtils.clear("base");
+                ThreadLocalUtils.clear("create");
+                ThreadLocalUtils.clear("update");
+                
+                // 最后完全移除ThreadLocal，确保没有残留数据
+                // 注释掉完全移除，因为可能影响现有业务逻辑
+                // 如果确认没有其他地方使用ThreadLocal，可以取消注释
+                // ThreadLocalUtils.remove();
+            } catch (Exception e) {
+                log.error("清理ThreadLocal失败", e);
+            }
 
             if (appResponse.hasException() && GenericService.class != invoker.getInterface()) {
                 try {
@@ -168,6 +179,16 @@ public class GlobalExceptionHandler extends ListenableFilter {
         @Override
         public void onError(Throwable e, Invoker<?> invoker, Invocation invocation) {
             log.error("Got unchecked and undeclared exception which called by " + RpcContext.getContext().getRemoteHost() + ". service: " + invoker.getInterface().getName() + ", method: " + invocation.getMethodName() + ", exception: " + e.getClass().getName() + ": " + e.getMessage(), e);
+            
+            // 错误时也要清理ThreadLocal，防止内存泄漏
+            try {
+                ThreadLocalUtils.clear("base");
+                ThreadLocalUtils.clear("create");
+                ThreadLocalUtils.clear("update");
+                // ThreadLocalUtils.remove(); // 如果确认没有其他地方使用，可以取消注释
+            } catch (Exception ex) {
+                log.error("清理ThreadLocal失败", ex);
+            }
         }
 
     }
