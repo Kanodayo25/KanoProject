@@ -61,7 +61,7 @@ public class InformationController {
         List<OutpatientDepartmentImportVO> importDataList = importObjs.stream()
                 .map(obj -> (OutpatientDepartmentImportVO) obj)
                 .collect(Collectors.toList());
-
+        log.info("当前导入读取记录数：{}", importDataList.size());
         //去除带剔除标识的数据
         List<OutpatientDepartmentImportVO> filterImportDataList = importDataList.stream().filter(e -> StringUtils.isNotEmpty(e.getDepartmentKickFlag()))
                 .collect(Collectors.toList());
@@ -71,7 +71,9 @@ public class InformationController {
 
         //进行数据筛选处理，返回需导出数据。
         ExportDataResult result = outCalculateExportData(groupedDataList, filtedOriginalDataVos);
-
+        log.info("当前筛选样本总量为：{}", result.totalPatientAfterPercent);
+        BigDecimal divideData = BigDecimal.valueOf(result.totalPatientAfterPercent / (importDataList.size() * 1.00));
+        log.info("样本总体抽取比例为：{}%", BigDecimal.valueOf(100.00).multiply(divideData));
         //导出excel
         ExportExcel(result.getExportVos(), DozerUtils.mapList(filtedOriginalDataVos, OutpatientDepartmentExVO.class), result.getTotalPatientAfterPercent(), response);
 
