@@ -21,6 +21,8 @@ public class RepairInfoReqDTO extends Page implements Serializable {
     private String departmentName;
     //问题描述
     private String troubleDesc;
+    //处理过程(文字描述)
+    private String dealDesc;
     //处理过程图片，视频地址
     private String dealProcess;
     //是否疑难
