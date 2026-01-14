@@ -24,7 +24,7 @@ import java.io.IOException;
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS})
 public class TroubleInfoController {
 
-    @Reference(url = "dubbo://175.178.101.42:20880")
+    @Reference
     //@Reference
     private RepairInfoService service;
 

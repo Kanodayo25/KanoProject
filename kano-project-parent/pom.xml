@@ -26,7 +26,7 @@
         <mybatis-spring-boot-starter.version>2.1.1</mybatis-spring-boot-starter.version>
         <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
         <dynamic-datasource.version>3.0.0</dynamic-datasource.version>
-        <lombok.version>1.18.0</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
         <dozer.version>6.5.0</dozer.version>
         <fastjson.version>1.2.61</fastjson.version>
         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>

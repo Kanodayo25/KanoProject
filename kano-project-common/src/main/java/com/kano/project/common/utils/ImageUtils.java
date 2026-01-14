@@ -1,7 +1,7 @@
 package com.kano.project.common.utils;
 
+import com.thoughtworks.xstream.core.util.Base64Encoder;
 import lombok.extern.slf4j.Slf4j;
-import sun.misc.BASE64Encoder;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -42,7 +42,7 @@ public class ImageUtils {
                 outStream.write(buffer, 0, len);
             }
             // 对字节数组Base64编码
-            BASE64Encoder encoder = new BASE64Encoder();
+            Base64Encoder encoder = new Base64Encoder();
             base64 = encoder.encode(outStream.toByteArray());
         } catch (Exception e) {
             log.error("imgToBase64读取图片异常：" + e.getMessage());
@@ -92,7 +92,7 @@ public class ImageUtils {
             }
         }
         //对字节数组Base64编码
-        BASE64Encoder encoder = new BASE64Encoder();
+        Base64Encoder encoder = new Base64Encoder();
         return encoder.encode(data);//返回Base64编码过的字节数组字符串
     }
 }
