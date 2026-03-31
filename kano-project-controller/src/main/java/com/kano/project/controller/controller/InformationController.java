@@ -82,6 +82,7 @@ public class InformationController {
     /**
      * 导出Excel
      * @param exportVos 导出数据
+     *
      * @param exportOriginVos 原始数据
      * @param totalPatientAfterPercent 总抽样份数
      * @param response HTTP响应
@@ -145,7 +146,6 @@ public class InformationController {
      * @return 导出数据结果
      */
     private ExportDataResult outCalculateExportData(Map<String, List<OutpatientDepartmentImportVO>> groupedDataList, List<OutpatientDepartmentImportVO> filtedOriginalDataVos) {
-        Random random = new Random();
         List<OutPatientDepartmentExportVO> resVOs = new ArrayList<>();
         int totalPatientAfterPercent = 0; // 使用局部变量
         

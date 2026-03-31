@@ -1,7 +1,5 @@
 package service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-
 /**
  * 系统菜单权限表(Role)表服务接口
  *
