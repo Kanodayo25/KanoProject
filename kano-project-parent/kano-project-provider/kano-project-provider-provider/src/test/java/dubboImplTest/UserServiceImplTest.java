@@ -3,6 +3,7 @@ package dubboImplTest;
 import com.kano.project.common.filter.MybatisPlusSqlFilter;
 import com.kano.project.common.helper.SpringApplicationHelper;
 import com.kano.project.common.model.Result;
+import com.kano.project.common.utils.Md5Utils;
 import com.kano.project.provider.KanoProjectProviderApplication;
 import com.kano.project.provider.dubboImpl.UserServiceImpl;
 import dto.UserReqDTO;

@@ -986,3 +986,1007 @@ java.lang.IllegalStateException: instance must be started before calling this me
 2025-10-29 16:05:34.123  INFO 19924 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2025-10-29 16:05:34.126  INFO 19924 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
 2025-10-29 16:05:34.127  INFO 19924 --- [SpringContextShutdownHook] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2025-11-03 16:40:14.335  INFO 16852 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2025-11-03 16:40:14.339  INFO 16852 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2025-11-03 16:40:14.446  INFO 16852 --- [main] dubboImplTest.RepairInfoServiceImplTest  : Starting RepairInfoServiceImplTest on 久式的笔记本 with PID 16852 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2025-11-03 16:40:14.447  INFO 16852 --- [main] dubboImplTest.RepairInfoServiceImplTest  : No active profile set, falling back to default profiles: default
+2025-11-03 16:40:14.872  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2025-11-03 16:40:14.873  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2025-11-03 16:40:14.873  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2025-11-03 16:40:14.873  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2025-11-03 16:40:14.873  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2025-11-03 16:40:14.873  INFO 16852 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2025-11-03 16:40:14.903  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-11-03 16:40:14.905  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-03 16:40:14.929  INFO 16852 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2025-11-03 16:40:15.183  INFO 16852 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2025-11-03 16:40:15.226  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:40:15.227  INFO 16852 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:40:15.251  INFO 16852 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-11-03 16:40:15.287  INFO 16852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$38a8bfa5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:40:15.398  INFO 16852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:40:15.402  INFO 16852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:40:15.403  INFO 16852 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:40:15.468  INFO 16852 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-11-03 16:40:15.470  INFO 16852 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-11-03 16:40:15.508  INFO 16852 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2025-11-03 16:40:15.664  INFO 16852 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2025-11-03 16:40:16.665  INFO 16852 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2025-11-03 16:40:16.665  INFO 16852 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2025-11-03 16:40:16.670  INFO 16852 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2025-11-03 16:40:16.672  INFO 16852 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2025-11-03 16:40:16.676  INFO 16852 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2025-11-03 16:40:16.825  INFO 16852 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2025-11-03 16:40:16.829  INFO 16852 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2025-11-03 16:40:16.838  INFO 16852 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2025-11-03 16:40:17.127  INFO 16852 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-11-03 16:40:17.139  INFO 16852 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-11-03 16:40:17.140  INFO 16852 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2025-11-03 16:40:17.140  INFO 16852 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-11-03 16:40:17.141  INFO 16852 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-11-03 16:40:17.141  INFO 16852 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-11-03 16:40:17.141  INFO 16852 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2025-11-03 16:40:17.141  INFO 16852 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@4e8afdad
+2025-11-03 16:40:17.295  INFO 16852 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-11-03 16:40:17.295  INFO 16852 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-11-03 16:40:17.356  INFO 16852 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2025-11-03 16:40:17.363  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=123.123.123.107
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_411
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=C:\Program Files\Java\jdk-1.8\jre
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\idea\IntelliJ IDEA 2024.1\lib\idea_rt.jar;D:\idea\IntelliJ IDEA 2024.1\plugins\junit\lib\junit5-rt.jar;D:\idea\IntelliJ IDEA 2024.1\plugins\junit\lib\junit-rt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\charsets.jar;C:\Program Files\Java\jdk-1.8\jre\lib\deploy.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk-1.8\jre\lib\javaws.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jce.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfr.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jsse.jar;C:\Program Files\Java\jdk-1.8\jre\lib\management-agent.jar;C:\Program Files\Java\jdk-1.8\jre\lib\plugin.jar;C:\Program Files\Java\jdk-1.8\jre\lib\resources.jar;C:\Program Files\Java\jdk-1.8\jre\lib\rt.jar;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider\target\test-classes;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider\target\classes;D:\javaProgram\KanoProject\kano-project-common\target\classes;D:\apache-maven-lib\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;D:\apache-maven-lib\org\springframework\spring-web\5.2.6.RELEASE\spring-web-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-beans\5.2.6.RELEASE\spring-beans-5.2.6.RELEASE.jar;D:\apache-maven-lib\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;D:\apache-maven-lib\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;D:\apache-maven-lib\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;D:\apache-maven-lib\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;D:\apache-maven-lib\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;D:\apache-maven-lib\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;D:\apache-maven-lib\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;D:\apache-maven-lib\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo\2.7.3\dubbo-2.7.3.jar;D:\apache-maven-lib\org\springframework\spring-context\5.2.6.RELEASE\spring-context-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-expression\5.2.6.RELEASE\spring-expression-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;D:\apache-maven-lib\io\netty\netty-all\4.1.49.Final\netty-all-4.1.49.Final.jar;D:\apache-maven-lib\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;D:\apache-maven-lib\com\dangdang\elastic-job-lite-core\2.1.5\elastic-job-lite-core-2.1.5.jar;D:\apache-maven-lib\com\dangdang\elastic-job-common-core\2.1.5\elastic-job-common-core-2.1.5.jar;D:\apache-maven-lib\org\quartz-scheduler\quartz\2.3.2\quartz-2.3.2.jar;D:\apache-maven-lib\com\mchange\mchange-commons-java\0.2.15\mchange-commons-java-0.2.15.jar;D:\apache-maven-lib\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;D:\apache-maven-lib\com\github\gavlyukovskiy\p6spy-spring-boot-starter\1.9.1\p6spy-spring-boot-starter-1.9.1.jar;D:\apache-maven-lib\com\github\gavlyukovskiy\datasource-decorator-spring-boot-autoconfigure\1.9.1\datasource-decorator-spring-boot-autoconfigure-1.9.1.jar;D:\apache-maven-lib\p6spy\p6spy\3.9.0\p6spy-3.9.0.jar;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-api\target\classes;D:\apache-maven-lib\com\baomidou\mybatis-plus-boot-starter\3.3.1\mybatis-plus-boot-starter-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus\3.3.1\mybatis-plus-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-extension\3.3.1\mybatis-plus-extension-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-core\3.3.1\mybatis-plus-core-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-annotation\3.3.1\mybatis-plus-annotation-3.3.1.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-autoconfigure\2.3.0.RELEASE\spring-boot-autoconfigure-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-jdbc\2.3.0.RELEASE\spring-boot-starter-jdbc-2.3.0.RELEASE.jar;D:\apache-maven-lib\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;D:\apache-maven-lib\org\springframework\spring-jdbc\5.2.6.RELEASE\spring-jdbc-5.2.6.RELEASE.jar;D:\apache-maven-lib\com\alibaba\druid-spring-boot-starter\1.1.21\druid-spring-boot-starter-1.1.21.jar;D:\apache-maven-lib\com\alibaba\druid\1.1.21\druid-1.1.21.jar;D:\apache-maven-lib\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;D:\apache-maven-lib\org\mybatis\spring\boot\mybatis-spring-boot-starter\2.1.1\mybatis-spring-boot-starter-2.1.1.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter\2.3.0.RELEASE\spring-boot-starter-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-logging\2.3.0.RELEASE\spring-boot-starter-logging-2.3.0.RELEASE.jar;D:\apache-maven-lib\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\apache-maven-lib\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\apache-maven-lib\org\apache\logging\log4j\log4j-to-slf4j\2.13.2\log4j-to-slf4j-2.13.2.jar;D:\apache-maven-lib\org\apache\logging\log4j\log4j-api\2.13.2\log4j-api-2.13.2.jar;D:\apache-maven-lib\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;D:\apache-maven-lib\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\apache-maven-lib\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\2.1.1\mybatis-spring-boot-autoconfigure-2.1.1.jar;D:\apache-maven-lib\org\mybatis\mybatis\3.5.3\mybatis-3.5.3.jar;D:\apache-maven-lib\org\mybatis\mybatis-spring\2.0.3\mybatis-spring-2.0.3.jar;D:\apache-maven-lib\mysql\mysql-connector-java\8.0.20\mysql-connector-java-8.0.20.jar;D:\apache-maven-lib\org\apache\curator\curator-framework\2.8.0\curator-framework-2.8.0.jar;D:\apache-maven-lib\org\apache\curator\curator-client\2.8.0\curator-client-2.8.0.jar;D:\apache-maven-lib\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\apache-maven-lib\log4j\log4j\1.2.16\log4j-1.2.16.jar;D:\apache-maven-lib\jline\jline\0.9.94\jline-0.9.94.jar;D:\apache-maven-lib\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;D:\apache-maven-lib\org\apache\curator\curator-recipes\2.8.0\curator-recipes-2.8.0.jar;D:\apache-maven-lib\com\google\guava\guava\20.0\guava-20.0.jar;D:\apache-maven-lib\org\glassfish\javax.el\3.0.0\javax.el-3.0.0.jar;D:\apache-maven-lib\org\hibernate\validator\hibernate-validator\6.1.5.Final\hibernate-validator-6.1.5.Final.jar;D:\apache-maven-lib\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;D:\apache-maven-lib\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;D:\apache-maven-lib\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring-boot-starter\6.5.0\dozer-spring-boot-starter-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring4\6.5.0\dozer-spring4-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring-boot-autoconfigure\6.5.0\dozer-spring-boot-autoconfigure-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-core\6.5.0\dozer-core-6.5.0.jar;D:\apache-maven-lib\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;D:\apache-maven-lib\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\apache-maven-lib\org\apache\commons\commons-lang3\3.10\commons-lang3-3.10.jar;D:\apache-maven-lib\commons-io\commons-io\2.5\commons-io-2.5.jar;D:\apache-maven-lib\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;D:\apache-maven-lib\org\objenesis\objenesis\2.6\objenesis-2.6.jar;D:\apache-maven-lib\org\javers\javers-core\5.12.0\javers-core-5.12.0.jar;D:\apache-maven-lib\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;D:\apache-maven-lib\io\github\classgraph\classgraph\4.8.78\classgraph-4.8.78.jar;D:\apache-maven-lib\io\jsonwebtoken\jjwt\0.9.1\jjwt-0.9.1.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-databind\2.11.0\jackson-databind-2.11.0.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-annotations\2.11.0\jackson-annotations-2.11.0.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-core\2.11.0\jackson-core-2.11.0.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper-spring-boot-starter\1.2.3\pagehelper-spring-boot-starter-1.2.3.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper-spring-boot-autoconfigure\1.2.3\pagehelper-spring-boot-autoconfigure-1.2.3.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper\5.1.2\pagehelper-5.1.2.jar;D:\apache-maven-lib\com\github\jsqlparser\jsqlparser\1.0\jsqlparser-1.0.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-generator\3.4.1\mybatis-plus-generator-3.4.1.jar;D:\apache-maven-lib\junit\junit\4.12\junit-4.12.jar;D:\apache-maven-lib\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-test\2.7.0\spring-boot-starter-test-2.7.0.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-test\2.3.0.RELEASE\spring-boot-test-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-test-autoconfigure\2.3.0.RELEASE\spring-boot-test-autoconfigure-2.3.0.RELEASE.jar;D:\apache-maven-lib\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;D:\apache-maven-lib\net\minidev\json-smart\2.3\json-smart-2.3.jar;D:\apache-maven-lib\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;D:\apache-maven-lib\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\apache-maven-lib\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\apache-maven-lib\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;D:\apache-maven-lib\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;D:\apache-maven-lib\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;D:\apache-maven-lib\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\apache-maven-lib\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;D:\apache-maven-lib\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;D:\apache-maven-lib\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;D:\apache-maven-lib\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;D:\apache-maven-lib\net\bytebuddy\byte-buddy-agent\1.10.10\byte-buddy-agent-1.10.10.jar;D:\apache-maven-lib\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;D:\apache-maven-lib\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;D:\apache-maven-lib\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-lib\org\springframework\spring-core\5.2.6.RELEASE\spring-core-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-jcl\5.2.6.RELEASE\spring-jcl-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;D:\apache-maven-lib\com\github\ulisesbocchio\jasypt-spring-boot-starter\2.1.0\jasypt-spring-boot-starter-2.1.0.jar;D:\apache-maven-lib\com\github\ulisesbocchio\jasypt-spring-boot\2.1.0\jasypt-spring-boot-2.1.0.jar;D:\apache-maven-lib\org\jasypt\jasypt\1.9.2\jasypt-1.9.2.jar;D:\apache-maven-lib\org\springframework\spring-test\5.2.5.RELEASE\spring-test-5.2.5.RELEASE.jar;D:\apache-maven-lib\com\alibaba\fastjson\1.2.61\fastjson-1.2.61.jar;D:\apache-maven-lib\org\projectlombok\lombok\1.18.0\lombok-1.18.0.jar;D:\apache-maven-lib\com\alibaba\easyexcel\2.2.3\easyexcel-2.2.3.jar;D:\apache-maven-lib\org\apache\poi\poi\3.17\poi-3.17.jar;D:\apache-maven-lib\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar;D:\apache-maven-lib\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;D:\apache-maven-lib\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar;D:\apache-maven-lib\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;D:\apache-maven-lib\stax\stax-api\1.0.1\stax-api-1.0.1.jar;D:\apache-maven-lib\cglib\cglib\3.1\cglib-3.1.jar;D:\apache-maven-lib\org\ow2\asm\asm\4.2\asm-4.2.jar;D:\apache-maven-lib\org\ehcache\ehcache\3.8.1\ehcache-3.8.1.jar;D:\apache-maven-lib\org\glassfish\jaxb\jaxb-runtime\2.3.3\jaxb-runtime-2.3.3.jar;D:\apache-maven-lib\org\glassfish\jaxb\txw2\2.3.3\txw2-2.3.3.jar;D:\apache-maven-lib\com\sun\istack\istack-commons-runtime\3.0.11\istack-commons-runtime-3.0.11.jar;D:\apache-maven-lib\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;D:\apache-maven-lib\com\qcloud\cos_api\5.6.24\cos_api-5.6.24.jar;D:\apache-maven-lib\org\apache\httpcomponents\httpclient\4.5.12\httpclient-4.5.12.jar;D:\apache-maven-lib\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;D:\apache-maven-lib\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;D:\apache-maven-lib\joda-time\joda-time\2.9.9\joda-time-2.9.9.jar;D:\apache-maven-lib\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;D:\apache-maven-lib\cn\dev33\sa-token-core\1.38.0\sa-token-core-1.38.0.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-data-redis\2.3.0.RELEASE\spring-boot-starter-data-redis-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-redis\2.3.0.RELEASE\spring-data-redis-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-keyvalue\2.3.0.RELEASE\spring-data-keyvalue-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-commons\2.3.0.RELEASE\spring-data-commons-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-tx\5.2.6.RELEASE\spring-tx-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-oxm\5.2.6.RELEASE\spring-oxm-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-aop\5.2.6.RELEASE\spring-aop-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-context-support\5.2.6.RELEASE\spring-context-support-5.2.6.RELEASE.jar;D:\apache-maven-lib\io\lettuce\lettuce-core\5.3.0.RELEASE\lettuce-core-5.3.0.RELEASE.jar;D:\apache-maven-lib\io\netty\netty-common\4.1.49.Final\netty-common-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-handler\4.1.49.Final\netty-handler-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-resolver\4.1.49.Final\netty-resolver-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-buffer\4.1.49.Final\netty-buffer-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-codec\4.1.49.Final\netty-codec-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-transport\4.1.49.Final\netty-transport-4.1.49.Final.jar;D:\apache-maven-lib\io\projectreactor\reactor-core\3.3.5.RELEASE\reactor-core-3.3.5.RELEASE.jar;D:\apache-maven-lib\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;D:\apache-maven-lib\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-starter\2.7.3\dubbo-spring-boot-starter-2.7.3.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-autoconfigure\2.7.3\dubbo-spring-boot-autoconfigure-2.7.3.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-autoconfigure-compatible\2.7.3\dubbo-spring-boot-autoconfigure-compatible-2.7.3.jar;C:\Users\51227\AppData\Local\JetBrains\IntelliJIdea2024.1\captureAgent\debugger-agent.jar
+2025-11-03 16:40:17.364  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=C:\Program Files\Java\jdk-1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python314\Scripts\;C:\Python314\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\SVN\bin;C:\Program Files\Java\jdk-1.8\jre\bin;C:\Program Files\Java\jdk-1.8\bin;D:\apache-maven-3.6.3\bin;D:\Git\Git\cmd;C:\Users\51227\AppData\Roaming\nvm;C:\Users\51227\AppData\Roaming\nvm\nodejs;C:\Users\51227\AppData\Roaming\nvm\v17.9.1;C:\Program Files\Bandizip\;C:\Users\51227\AppData\Local\Programs\Python\Python313;C:\Program Files\dotnet\;C:\Users\51227\AppData\Local\Programs\Python\Python313\Scripts;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\51227\AppData\Local\Programs\Python\Launcher\;C:\Users\51227\AppData\Local\Microsoft\WindowsApps;D:\fiddler;D:\Microsoft VS Code\bin;C:\Users\51227\AppData\Roaming\nvm;C:\Users\51227\AppData\Roaming\nvm\nodejs;D:\PyCharm 2024.3.5\bin;;C:\Users\51227\AppData\Local\Microsoft\WindowsApps;;C:\Users\51227\AppData\Local\Programs\Ollama;C:\Users\51227\AppData\Roaming\npm;.
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\51227\AppData\Local\Temp\
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 11
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=51227
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\51227
+2025-11-03 16:40:17.365  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider
+2025-11-03 16:40:17.366  INFO 16852 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=175.178.101.42:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@76220ef1
+2025-11-03 16:40:17.643  INFO 16852 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 175.178.101.42/175.178.101.42:2181. Will not attempt to authenticate using SASL (unknown error)
+2025-11-03 16:40:17.676  INFO 16852 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 175.178.101.42/175.178.101.42:2181, initiating session
+2025-11-03 16:40:17.711  INFO 16852 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 175.178.101.42/175.178.101.42:2181, sessionid = 0x1000a7e0439002e, negotiated timeout = 40000
+2025-11-03 16:40:17.714  INFO 16852 --- [main-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2025-11-03 16:40:18.983  INFO 16852 --- [main] dubboImplTest.RepairInfoServiceImplTest  : Started RepairInfoServiceImplTest in 4.812 seconds (JVM running for 5.63)
+2025-11-03 16:40:18.985  INFO 16852 --- [pool-1-thread-1] .b.c.e.AwaitingNonWebApplicationListener :  [Dubbo] Current Spring Boot Application is await...
+2025-11-03 16:40:29.205  INFO 16852 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2025-11-03 16:40:29.205  INFO 16852 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2025-11-03 16:40:29.209  INFO 16852 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2025-11-03 16:40:37.935  INFO 16852 --- [SpringContextShutdownHook] .b.c.e.AwaitingNonWebApplicationListener :  [Dubbo] Current Spring Boot Application is about to shutdown...
+2025-11-03 16:42:22.173  INFO 22764 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2025-11-03 16:42:22.177  INFO 22764 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2025-11-03 16:42:22.289  INFO 22764 --- [main] dubboImplTest.RepairInfoServiceImplTest  : Starting RepairInfoServiceImplTest on 久式的笔记本 with PID 22764 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2025-11-03 16:42:22.289  INFO 22764 --- [main] dubboImplTest.RepairInfoServiceImplTest  : No active profile set, falling back to default profiles: default
+2025-11-03 16:42:22.693  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2025-11-03 16:42:22.694  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2025-11-03 16:42:22.694  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2025-11-03 16:42:22.695  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2025-11-03 16:42:22.695  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2025-11-03 16:42:22.695  INFO 22764 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2025-11-03 16:42:22.724  INFO 22764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2025-11-03 16:42:22.727  INFO 22764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-03 16:42:22.752  INFO 22764 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2025-11-03 16:42:23.001  INFO 22764 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:42:23.045  INFO 22764 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2025-11-03 16:42:23.068  INFO 22764 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2025-11-03 16:42:23.104  INFO 22764 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$cc4e3f16] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:42:23.207  INFO 22764 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:42:23.212  INFO 22764 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:42:23.213  INFO 22764 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-11-03 16:42:23.273  INFO 22764 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2025-11-03 16:42:23.275  INFO 22764 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2025-11-03 16:42:23.321  INFO 22764 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2025-11-03 16:42:23.472  INFO 22764 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2025-11-03 16:42:24.465  INFO 22764 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2025-11-03 16:42:24.465  INFO 22764 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2025-11-03 16:42:24.469  INFO 22764 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2025-11-03 16:42:24.472  INFO 22764 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2025-11-03 16:42:24.475  INFO 22764 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2025-11-03 16:42:24.623  INFO 22764 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2025-11-03 16:42:24.627  INFO 22764 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2025-11-03 16:42:24.636  INFO 22764 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2025-11-03 16:42:24.901  INFO 22764 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2025-11-03 16:42:24.910  INFO 22764 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-11-03 16:42:24.911  INFO 22764 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2025-11-03 16:42:24.911  INFO 22764 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2025-11-03 16:42:24.912  INFO 22764 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-11-03 16:42:24.912  INFO 22764 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-11-03 16:42:24.912  INFO 22764 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2025-11-03 16:42:24.912  INFO 22764 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@7c956dda
+2025-11-03 16:42:25.067  INFO 22764 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2025-11-03 16:42:25.067  INFO 22764 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-11-03 16:42:25.126  INFO 22764 --- [main] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:host.name=123.123.123.107
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.version=1.8.0_411
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.vendor=Oracle Corporation
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.home=C:\Program Files\Java\jdk-1.8\jre
+2025-11-03 16:42:25.133  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.class.path=D:\idea\IntelliJ IDEA 2024.1\lib\idea_rt.jar;D:\idea\IntelliJ IDEA 2024.1\plugins\junit\lib\junit5-rt.jar;D:\idea\IntelliJ IDEA 2024.1\plugins\junit\lib\junit-rt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\charsets.jar;C:\Program Files\Java\jdk-1.8\jre\lib\deploy.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk-1.8\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk-1.8\jre\lib\javaws.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jce.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfr.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jsse.jar;C:\Program Files\Java\jdk-1.8\jre\lib\management-agent.jar;C:\Program Files\Java\jdk-1.8\jre\lib\plugin.jar;C:\Program Files\Java\jdk-1.8\jre\lib\resources.jar;C:\Program Files\Java\jdk-1.8\jre\lib\rt.jar;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider\target\test-classes;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider\target\classes;D:\javaProgram\KanoProject\kano-project-common\target\classes;D:\apache-maven-lib\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;D:\apache-maven-lib\org\springframework\spring-web\5.2.6.RELEASE\spring-web-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-beans\5.2.6.RELEASE\spring-beans-5.2.6.RELEASE.jar;D:\apache-maven-lib\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;D:\apache-maven-lib\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;D:\apache-maven-lib\io\springfox\springfox-swagger2\2.9.2\springfox-swagger2-2.9.2.jar;D:\apache-maven-lib\io\swagger\swagger-annotations\1.5.20\swagger-annotations-1.5.20.jar;D:\apache-maven-lib\io\swagger\swagger-models\1.5.20\swagger-models-1.5.20.jar;D:\apache-maven-lib\io\springfox\springfox-spi\2.9.2\springfox-spi-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-core\2.9.2\springfox-core-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-schema\2.9.2\springfox-schema-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-swagger-common\2.9.2\springfox-swagger-common-2.9.2.jar;D:\apache-maven-lib\io\springfox\springfox-spring-web\2.9.2\springfox-spring-web-2.9.2.jar;D:\apache-maven-lib\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;D:\apache-maven-lib\org\mapstruct\mapstruct\1.2.0.Final\mapstruct-1.2.0.Final.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo\2.7.3\dubbo-2.7.3.jar;D:\apache-maven-lib\org\springframework\spring-context\5.2.6.RELEASE\spring-context-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-expression\5.2.6.RELEASE\spring-expression-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\javassist\javassist\3.20.0-GA\javassist-3.20.0-GA.jar;D:\apache-maven-lib\io\netty\netty-all\4.1.49.Final\netty-all-4.1.49.Final.jar;D:\apache-maven-lib\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;D:\apache-maven-lib\com\dangdang\elastic-job-lite-core\2.1.5\elastic-job-lite-core-2.1.5.jar;D:\apache-maven-lib\com\dangdang\elastic-job-common-core\2.1.5\elastic-job-common-core-2.1.5.jar;D:\apache-maven-lib\org\quartz-scheduler\quartz\2.3.2\quartz-2.3.2.jar;D:\apache-maven-lib\com\mchange\mchange-commons-java\0.2.15\mchange-commons-java-0.2.15.jar;D:\apache-maven-lib\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;D:\apache-maven-lib\com\github\gavlyukovskiy\p6spy-spring-boot-starter\1.9.1\p6spy-spring-boot-starter-1.9.1.jar;D:\apache-maven-lib\com\github\gavlyukovskiy\datasource-decorator-spring-boot-autoconfigure\1.9.1\datasource-decorator-spring-boot-autoconfigure-1.9.1.jar;D:\apache-maven-lib\p6spy\p6spy\3.9.0\p6spy-3.9.0.jar;D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-api\target\classes;D:\apache-maven-lib\com\baomidou\mybatis-plus-boot-starter\3.3.1\mybatis-plus-boot-starter-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus\3.3.1\mybatis-plus-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-extension\3.3.1\mybatis-plus-extension-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-core\3.3.1\mybatis-plus-core-3.3.1.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-annotation\3.3.1\mybatis-plus-annotation-3.3.1.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-autoconfigure\2.3.0.RELEASE\spring-boot-autoconfigure-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot\2.3.0.RELEASE\spring-boot-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-jdbc\2.3.0.RELEASE\spring-boot-starter-jdbc-2.3.0.RELEASE.jar;D:\apache-maven-lib\com\zaxxer\HikariCP\3.4.5\HikariCP-3.4.5.jar;D:\apache-maven-lib\org\springframework\spring-jdbc\5.2.6.RELEASE\spring-jdbc-5.2.6.RELEASE.jar;D:\apache-maven-lib\com\alibaba\druid-spring-boot-starter\1.1.21\druid-spring-boot-starter-1.1.21.jar;D:\apache-maven-lib\com\alibaba\druid\1.1.21\druid-1.1.21.jar;D:\apache-maven-lib\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;D:\apache-maven-lib\org\mybatis\spring\boot\mybatis-spring-boot-starter\2.1.1\mybatis-spring-boot-starter-2.1.1.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter\2.3.0.RELEASE\spring-boot-starter-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-logging\2.3.0.RELEASE\spring-boot-starter-logging-2.3.0.RELEASE.jar;D:\apache-maven-lib\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\apache-maven-lib\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\apache-maven-lib\org\apache\logging\log4j\log4j-to-slf4j\2.13.2\log4j-to-slf4j-2.13.2.jar;D:\apache-maven-lib\org\apache\logging\log4j\log4j-api\2.13.2\log4j-api-2.13.2.jar;D:\apache-maven-lib\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;D:\apache-maven-lib\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;D:\apache-maven-lib\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\2.1.1\mybatis-spring-boot-autoconfigure-2.1.1.jar;D:\apache-maven-lib\org\mybatis\mybatis\3.5.3\mybatis-3.5.3.jar;D:\apache-maven-lib\org\mybatis\mybatis-spring\2.0.3\mybatis-spring-2.0.3.jar;D:\apache-maven-lib\mysql\mysql-connector-java\8.0.20\mysql-connector-java-8.0.20.jar;D:\apache-maven-lib\org\apache\curator\curator-framework\2.8.0\curator-framework-2.8.0.jar;D:\apache-maven-lib\org\apache\curator\curator-client\2.8.0\curator-client-2.8.0.jar;D:\apache-maven-lib\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\apache-maven-lib\log4j\log4j\1.2.16\log4j-1.2.16.jar;D:\apache-maven-lib\jline\jline\0.9.94\jline-0.9.94.jar;D:\apache-maven-lib\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;D:\apache-maven-lib\org\apache\curator\curator-recipes\2.8.0\curator-recipes-2.8.0.jar;D:\apache-maven-lib\com\google\guava\guava\20.0\guava-20.0.jar;D:\apache-maven-lib\org\glassfish\javax.el\3.0.0\javax.el-3.0.0.jar;D:\apache-maven-lib\org\hibernate\validator\hibernate-validator\6.1.5.Final\hibernate-validator-6.1.5.Final.jar;D:\apache-maven-lib\org\jboss\logging\jboss-logging\3.4.1.Final\jboss-logging-3.4.1.Final.jar;D:\apache-maven-lib\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;D:\apache-maven-lib\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring-boot-starter\6.5.0\dozer-spring-boot-starter-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring4\6.5.0\dozer-spring4-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-spring-boot-autoconfigure\6.5.0\dozer-spring-boot-autoconfigure-6.5.0.jar;D:\apache-maven-lib\com\github\dozermapper\dozer-core\6.5.0\dozer-core-6.5.0.jar;D:\apache-maven-lib\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;D:\apache-maven-lib\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\apache-maven-lib\org\apache\commons\commons-lang3\3.10\commons-lang3-3.10.jar;D:\apache-maven-lib\commons-io\commons-io\2.5\commons-io-2.5.jar;D:\apache-maven-lib\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;D:\apache-maven-lib\org\objenesis\objenesis\2.6\objenesis-2.6.jar;D:\apache-maven-lib\org\javers\javers-core\5.12.0\javers-core-5.12.0.jar;D:\apache-maven-lib\org\picocontainer\picocontainer\2.15\picocontainer-2.15.jar;D:\apache-maven-lib\io\github\classgraph\classgraph\4.8.78\classgraph-4.8.78.jar;D:\apache-maven-lib\io\jsonwebtoken\jjwt\0.9.1\jjwt-0.9.1.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-databind\2.11.0\jackson-databind-2.11.0.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-annotations\2.11.0\jackson-annotations-2.11.0.jar;D:\apache-maven-lib\com\fasterxml\jackson\core\jackson-core\2.11.0\jackson-core-2.11.0.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper-spring-boot-starter\1.2.3\pagehelper-spring-boot-starter-1.2.3.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper-spring-boot-autoconfigure\1.2.3\pagehelper-spring-boot-autoconfigure-1.2.3.jar;D:\apache-maven-lib\com\github\pagehelper\pagehelper\5.1.2\pagehelper-5.1.2.jar;D:\apache-maven-lib\com\github\jsqlparser\jsqlparser\1.0\jsqlparser-1.0.jar;D:\apache-maven-lib\com\baomidou\mybatis-plus-generator\3.4.1\mybatis-plus-generator-3.4.1.jar;D:\apache-maven-lib\junit\junit\4.12\junit-4.12.jar;D:\apache-maven-lib\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-test\2.7.0\spring-boot-starter-test-2.7.0.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-test\2.3.0.RELEASE\spring-boot-test-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-test-autoconfigure\2.3.0.RELEASE\spring-boot-test-autoconfigure-2.3.0.RELEASE.jar;D:\apache-maven-lib\com\jayway\jsonpath\json-path\2.4.0\json-path-2.4.0.jar;D:\apache-maven-lib\net\minidev\json-smart\2.3\json-smart-2.3.jar;D:\apache-maven-lib\net\minidev\accessors-smart\1.2\accessors-smart-1.2.jar;D:\apache-maven-lib\jakarta\xml\bind\jakarta.xml.bind-api\2.3.3\jakarta.xml.bind-api-2.3.3.jar;D:\apache-maven-lib\jakarta\activation\jakarta.activation-api\1.2.2\jakarta.activation-api-1.2.2.jar;D:\apache-maven-lib\org\assertj\assertj-core\3.16.1\assertj-core-3.16.1.jar;D:\apache-maven-lib\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;D:\apache-maven-lib\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;D:\apache-maven-lib\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\apache-maven-lib\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;D:\apache-maven-lib\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;D:\apache-maven-lib\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;D:\apache-maven-lib\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;D:\apache-maven-lib\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;D:\apache-maven-lib\net\bytebuddy\byte-buddy-agent\1.10.10\byte-buddy-agent-1.10.10.jar;D:\apache-maven-lib\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;D:\apache-maven-lib\org\skyscreamer\jsonassert\1.5.0\jsonassert-1.5.0.jar;D:\apache-maven-lib\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;D:\apache-maven-lib\org\springframework\spring-core\5.2.6.RELEASE\spring-core-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-jcl\5.2.6.RELEASE\spring-jcl-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;D:\apache-maven-lib\com\github\ulisesbocchio\jasypt-spring-boot-starter\2.1.0\jasypt-spring-boot-starter-2.1.0.jar;D:\apache-maven-lib\com\github\ulisesbocchio\jasypt-spring-boot\2.1.0\jasypt-spring-boot-2.1.0.jar;D:\apache-maven-lib\org\jasypt\jasypt\1.9.2\jasypt-1.9.2.jar;D:\apache-maven-lib\org\springframework\spring-test\5.2.5.RELEASE\spring-test-5.2.5.RELEASE.jar;D:\apache-maven-lib\com\alibaba\fastjson\1.2.61\fastjson-1.2.61.jar;D:\apache-maven-lib\org\projectlombok\lombok\1.18.0\lombok-1.18.0.jar;D:\apache-maven-lib\com\alibaba\easyexcel\2.2.3\easyexcel-2.2.3.jar;D:\apache-maven-lib\org\apache\poi\poi\3.17\poi-3.17.jar;D:\apache-maven-lib\org\apache\poi\poi-ooxml\3.17\poi-ooxml-3.17.jar;D:\apache-maven-lib\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;D:\apache-maven-lib\org\apache\poi\poi-ooxml-schemas\3.17\poi-ooxml-schemas-3.17.jar;D:\apache-maven-lib\org\apache\xmlbeans\xmlbeans\2.6.0\xmlbeans-2.6.0.jar;D:\apache-maven-lib\stax\stax-api\1.0.1\stax-api-1.0.1.jar;D:\apache-maven-lib\cglib\cglib\3.1\cglib-3.1.jar;D:\apache-maven-lib\org\ow2\asm\asm\4.2\asm-4.2.jar;D:\apache-maven-lib\org\ehcache\ehcache\3.8.1\ehcache-3.8.1.jar;D:\apache-maven-lib\org\glassfish\jaxb\jaxb-runtime\2.3.3\jaxb-runtime-2.3.3.jar;D:\apache-maven-lib\org\glassfish\jaxb\txw2\2.3.3\txw2-2.3.3.jar;D:\apache-maven-lib\com\sun\istack\istack-commons-runtime\3.0.11\istack-commons-runtime-3.0.11.jar;D:\apache-maven-lib\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;D:\apache-maven-lib\com\qcloud\cos_api\5.6.24\cos_api-5.6.24.jar;D:\apache-maven-lib\org\apache\httpcomponents\httpclient\4.5.12\httpclient-4.5.12.jar;D:\apache-maven-lib\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;D:\apache-maven-lib\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;D:\apache-maven-lib\joda-time\joda-time\2.9.9\joda-time-2.9.9.jar;D:\apache-maven-lib\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;D:\apache-maven-lib\cn\dev33\sa-token-core\1.38.0\sa-token-core-1.38.0.jar;D:\apache-maven-lib\org\springframework\boot\spring-boot-starter-data-redis\2.3.0.RELEASE\spring-boot-starter-data-redis-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-redis\2.3.0.RELEASE\spring-data-redis-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-keyvalue\2.3.0.RELEASE\spring-data-keyvalue-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\data\spring-data-commons\2.3.0.RELEASE\spring-data-commons-2.3.0.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-tx\5.2.6.RELEASE\spring-tx-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-oxm\5.2.6.RELEASE\spring-oxm-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-aop\5.2.6.RELEASE\spring-aop-5.2.6.RELEASE.jar;D:\apache-maven-lib\org\springframework\spring-context-support\5.2.6.RELEASE\spring-context-support-5.2.6.RELEASE.jar;D:\apache-maven-lib\io\lettuce\lettuce-core\5.3.0.RELEASE\lettuce-core-5.3.0.RELEASE.jar;D:\apache-maven-lib\io\netty\netty-common\4.1.49.Final\netty-common-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-handler\4.1.49.Final\netty-handler-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-resolver\4.1.49.Final\netty-resolver-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-buffer\4.1.49.Final\netty-buffer-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-codec\4.1.49.Final\netty-codec-4.1.49.Final.jar;D:\apache-maven-lib\io\netty\netty-transport\4.1.49.Final\netty-transport-4.1.49.Final.jar;D:\apache-maven-lib\io\projectreactor\reactor-core\3.3.5.RELEASE\reactor-core-3.3.5.RELEASE.jar;D:\apache-maven-lib\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;D:\apache-maven-lib\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-starter\2.7.3\dubbo-spring-boot-starter-2.7.3.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-autoconfigure\2.7.3\dubbo-spring-boot-autoconfigure-2.7.3.jar;D:\apache-maven-lib\org\apache\dubbo\dubbo-spring-boot-autoconfigure-compatible\2.7.3\dubbo-spring-boot-autoconfigure-compatible-2.7.3.jar;C:\Users\51227\AppData\Local\JetBrains\IntelliJIdea2024.1\captureAgent\debugger-agent.jar
+2025-11-03 16:42:25.134  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.library.path=C:\Program Files\Java\jdk-1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python314\Scripts\;C:\Python314\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\SVN\bin;C:\Program Files\Java\jdk-1.8\jre\bin;C:\Program Files\Java\jdk-1.8\bin;D:\apache-maven-3.6.3\bin;D:\Git\Git\cmd;C:\Users\51227\AppData\Roaming\nvm;C:\Users\51227\AppData\Roaming\nvm\nodejs;C:\Users\51227\AppData\Roaming\nvm\v17.9.1;C:\Program Files\Bandizip\;C:\Users\51227\AppData\Local\Programs\Python\Python313;C:\Program Files\dotnet\;C:\Users\51227\AppData\Local\Programs\Python\Python313\Scripts;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\51227\AppData\Local\Programs\Python\Launcher\;C:\Users\51227\AppData\Local\Microsoft\WindowsApps;D:\fiddler;D:\Microsoft VS Code\bin;C:\Users\51227\AppData\Roaming\nvm;C:\Users\51227\AppData\Roaming\nvm\nodejs;D:\PyCharm 2024.3.5\bin;;C:\Users\51227\AppData\Local\Microsoft\WindowsApps;;C:\Users\51227\AppData\Local\Programs\Ollama;C:\Users\51227\AppData\Roaming\npm;.
+2025-11-03 16:42:25.134  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.io.tmpdir=C:\Users\51227\AppData\Local\Temp\
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:java.compiler=<NA>
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.name=Windows 11
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.arch=amd64
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:os.version=10.0
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.name=51227
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.home=C:\Users\51227
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Client environment:user.dir=D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider
+2025-11-03 16:42:25.135  INFO 22764 --- [main] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=175.178.101.42:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@33e8e146
+2025-11-03 16:42:25.394  INFO 22764 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 175.178.101.42/175.178.101.42:2181. Will not attempt to authenticate using SASL (unknown error)
+2025-11-03 16:42:25.629  INFO 22764 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 175.178.101.42/175.178.101.42:2181, initiating session
+2025-11-03 16:42:25.677  INFO 22764 --- [main-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 175.178.101.42/175.178.101.42:2181, sessionid = 0x1000a7e0439002f, negotiated timeout = 40000
+2025-11-03 16:42:25.681  INFO 22764 --- [main-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2025-11-03 16:42:27.616  INFO 22764 --- [main] dubboImplTest.RepairInfoServiceImplTest  : Started RepairInfoServiceImplTest in 5.61 seconds (JVM running for 6.457)
+2025-11-03 16:42:27.618  INFO 22764 --- [pool-1-thread-1] .b.c.e.AwaitingNonWebApplicationListener :  [Dubbo] Current Spring Boot Application is await...
+2025-11-03 16:42:29.514  INFO 22764 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2025-11-03 16:42:29.514  INFO 22764 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2025-11-03 16:42:29.514  INFO 22764 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2025-11-03 16:42:43.489  INFO 22764 --- [SpringContextShutdownHook] .b.c.e.AwaitingNonWebApplicationListener :  [Dubbo] Current Spring Boot Application is about to shutdown...
+2025-11-03 16:42:43.603 ERROR 22764 --- [main-EventThread] o.a.c.f.imps.CuratorFrameworkImpl        : Background exception was not retry-able or retry gave up
+
+java.lang.IllegalStateException: instance must be started before calling this method
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:444) ~[guava-20.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkExists(CuratorFrameworkImpl.java:355) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.wasDeleted(TreeCache.java:295) ~[curator-recipes-2.8.0.jar:na]
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.processResult(TreeCache.java:351) ~[curator-recipes-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.sendToBackgroundCallback(CuratorFrameworkImpl.java:728) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.processBackgroundOperation(CuratorFrameworkImpl.java:505) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$1.processResult(ExistsBuilderImpl.java:123) [curator-framework-2.8.0.jar:na]
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:555) [zookeeper-3.4.6.jar:3.4.6-1569965]
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498) [zookeeper-3.4.6.jar:3.4.6-1569965]
+
+2025-11-03 16:42:43.604 ERROR 22764 --- [main-EventThread] o.a.c.f.imps.CuratorFrameworkImpl        : Background exception was not retry-able or retry gave up
+
+java.lang.IllegalStateException: instance must be started before calling this method
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:444) ~[guava-20.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.checkExists(CuratorFrameworkImpl.java:355) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.wasDeleted(TreeCache.java:295) ~[curator-recipes-2.8.0.jar:na]
+	at org.apache.curator.framework.recipes.cache.TreeCache$TreeNode.processResult(TreeCache.java:351) ~[curator-recipes-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.sendToBackgroundCallback(CuratorFrameworkImpl.java:728) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.CuratorFrameworkImpl.processBackgroundOperation(CuratorFrameworkImpl.java:505) [curator-framework-2.8.0.jar:na]
+	at org.apache.curator.framework.imps.ExistsBuilderImpl$1.processResult(ExistsBuilderImpl.java:123) [curator-framework-2.8.0.jar:na]
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:555) [zookeeper-3.4.6.jar:3.4.6-1569965]
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:498) [zookeeper-3.4.6.jar:3.4.6-1569965]
+
+2025-11-03 16:42:43.613  INFO 22764 --- [main-EventThread] org.apache.zookeeper.ClientCnxn          : EventThread shut down
+2025-11-03 16:42:43.613  INFO 22764 --- [SpringContextShutdownHook] org.apache.zookeeper.ZooKeeper           : Session: 0x1000a7e0439002f closed
+2025-11-03 16:42:43.618  INFO 22764 --- [SpringContextShutdownHook] o.a.c.f.imps.CuratorFrameworkImpl        : Starting
+2025-11-03 16:42:43.618  INFO 22764 --- [SpringContextShutdownHook] org.apache.zookeeper.ZooKeeper           : Initiating client connection, connectString=175.178.101.42:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@3c00c6bf
+2025-11-03 16:42:43.619  INFO 22764 --- [SpringContextShutdownHook-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Opening socket connection to server 175.178.101.42/175.178.101.42:2181. Will not attempt to authenticate using SASL (unknown error)
+2025-11-03 16:42:43.653  INFO 22764 --- [SpringContextShutdownHook-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Socket connection established to 175.178.101.42/175.178.101.42:2181, initiating session
+2025-11-03 16:42:43.684  INFO 22764 --- [SpringContextShutdownHook-SendThread(175.178.101.42:2181)] org.apache.zookeeper.ClientCnxn          : Session establishment complete on server 175.178.101.42/175.178.101.42:2181, sessionid = 0x1000a7e04390030, negotiated timeout = 40000
+2025-11-03 16:42:43.684  INFO 22764 --- [SpringContextShutdownHook-EventThread] o.a.c.f.state.ConnectionStateManager     : State change: CONNECTED
+2025-11-03 16:42:43.779  INFO 22764 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-11-03 16:42:43.780  INFO 22764 --- [SpringContextShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2025-11-03 16:42:43.780  INFO 22764 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2025-11-03 16:42:43.780  INFO 22764 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-11-03 16:42:43.780  INFO 22764 --- [SpringContextShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2025-11-03 16:42:43.791  INFO 22764 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2025-11-03 16:42:43.794  INFO 22764 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2025-11-03 16:42:43.794  INFO 22764 --- [SpringContextShutdownHook] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2026-07-28 17:10:43.886  INFO 9900 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2026-07-28 17:10:43.890  INFO 9900 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.threadpool=fixed, dubbo.protocol.threads=64, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2026-07-28 17:10:44.001  INFO 9900 --- [main] dubboImplTest.UserServiceImplTest        : Starting UserServiceImplTest on KanoLap with PID 9900 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2026-07-28 17:10:44.002  INFO 9900 --- [main] dubboImplTest.UserServiceImplTest        : No active profile set, falling back to default profiles: default
+2026-07-28 17:10:44.435  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2026-07-28 17:10:44.436  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2026-07-28 17:10:44.476  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-07-28 17:10:44.479  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-28 17:10:44.506  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2026-07-28 17:10:44.794  INFO 9900 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2026-07-28 17:10:44.846  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:44.847  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:44.870  INFO 9900 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2026-07-28 17:10:44.902  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$55551f34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:45.018  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:45.023  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:45.025  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:45.025  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:45.108  INFO 9900 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2026-07-28 17:10:45.110  INFO 9900 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2026-07-28 17:10:45.169  INFO 9900 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-07-28 17:10:45.271  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-07-28 17:10:46.131  INFO 9900 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2026-07-28 17:10:46.132  INFO 9900 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2026-07-28 17:10:46.136  INFO 9900 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2026-07-28 17:10:46.140  INFO 9900 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2026-07-28 17:10:46.143  INFO 9900 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2026-07-28 17:10:46.368  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2026-07-28 17:10:46.375  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2026-07-28 17:10:46.398  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2026-07-28 17:10:46.412  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2026-07-28 17:10:46.829  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2026-07-28 17:10:46.852  INFO 9900 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-07-28 17:10:46.853  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2026-07-28 17:10:46.855  INFO 9900 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2026-07-28 17:10:46.857  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-07-28 17:10:46.858  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-07-28 17:10:46.858  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2026-07-28 17:10:46.858  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@21280cbb
+2026-07-28 17:10:47.096  WARN 9900 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+2026-07-28 17:10:47.098  INFO 9900 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2026-07-28 17:10:47.098  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-07-28 17:10:47.098  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-07-28 17:10:47.099  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-07-28 17:10:47.117  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-07-28 17:10:47.118  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-07-28 17:10:47.119  INFO 9900 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2026-07-28 17:10:47.126  INFO 9900 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-07-28 17:10:47.134 ERROR 9900 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to create adaptive instance: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:486) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.config.ServiceConfig.<clinit>(ServiceConfig.java:119) ~[dubbo-2.7.3.jar:2.7.3]
+	... 52 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:847) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:482) ~[dubbo-2.7.3.jar:2.7.3]
+	... 53 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
+	at javassist.ClassPool.toClass2(ClassPool.java:1181) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.ClassPool.toClass(ClassPool.java:1164) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.CtClass.toClass(CtClass.java:1305) ~[javassist-3.20.0-GA.jar:na]
+	at org.apache.dubbo.common.compiler.support.JavassistCompiler.doCompile(JavassistCompiler.java:82) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AbstractCompiler.compile(AbstractCompiler.java:58) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AdaptiveCompiler.compile(AdaptiveCompiler.java:45) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtensionClass(ExtensionLoader.java:863) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtensionClass(ExtensionLoader.java:856) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:845) ~[dubbo-2.7.3.jar:2.7.3]
+	... 54 common frames omitted
+
+2026-07-28 17:10:47.154  INFO 9900 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.threadpool=fixed, dubbo.protocol.threads=64, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2026-07-28 17:10:47.161  INFO 9900 --- [main] dubboImplTest.UserServiceImplTest        : Starting UserServiceImplTest on KanoLap with PID 9900 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2026-07-28 17:10:47.161  INFO 9900 --- [main] dubboImplTest.UserServiceImplTest        : No active profile set, falling back to default profiles: default
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2026-07-28 17:10:47.356  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2026-07-28 17:10:47.358  INFO 9900 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2026-07-28 17:10:47.366  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-07-28 17:10:47.367  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-28 17:10:47.375  INFO 9900 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2026-07-28 17:10:47.422  INFO 9900 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2026-07-28 17:10:47.429  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2026-07-28 17:10:47.429  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:47.429  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:47.429  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:47.429  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2026-07-28 17:10:47.430  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:47.430  INFO 9900 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:10:47.437  INFO 9900 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2026-07-28 17:10:47.465  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$55551f34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:47.489  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:47.494  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:47.496  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:47.498  INFO 9900 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:10:47.525  INFO 9900 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2026-07-28 17:10:47.526  INFO 9900 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2026-07-28 17:10:47.545  INFO 9900 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-07-28 17:10:47.575  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2026-07-28 17:10:47.787  INFO 9900 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2026-07-28 17:10:47.787  INFO 9900 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2026-07-28 17:10:47.788  INFO 9900 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2026-07-28 17:10:47.818  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2026-07-28 17:10:47.822  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2026-07-28 17:10:47.826  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2026-07-28 17:10:47.834  INFO 9900 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2026-07-28 17:10:47.951  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2026-07-28 17:10:47.953  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@92fd091
+2026-07-28 17:10:47.990  WARN 9900 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+2026-07-28 17:10:47.991  INFO 9900 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2026-07-28 17:10:47.991  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-07-28 17:10:47.991  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-07-28 17:10:47.991  INFO 9900 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-07-28 17:10:47.992  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2026-07-28 17:10:47.993  INFO 9900 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2026-07-28 17:10:47.993  INFO 9900 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2026-07-28 17:10:47.996  INFO 9900 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-07-28 17:10:47.998 ERROR 9900 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 43 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	... 23 common frames omitted
+
+2026-07-28 17:10:48.001 ERROR 9900 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e27aa33] to prepare test instance [dubboImplTest.UserServiceImplTest@183ec003]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to create adaptive instance: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:486) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.config.ServiceConfig.<clinit>(ServiceConfig.java:119) ~[dubbo-2.7.3.jar:2.7.3]
+	... 52 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:847) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:482) ~[dubbo-2.7.3.jar:2.7.3]
+	... 53 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @61ca4046
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
+	at javassist.ClassPool.toClass2(ClassPool.java:1181) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.ClassPool.toClass(ClassPool.java:1164) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.CtClass.toClass(CtClass.java:1305) ~[javassist-3.20.0-GA.jar:na]
+	at org.apache.dubbo.common.compiler.support.JavassistCompiler.doCompile(JavassistCompiler.java:82) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AbstractCompiler.compile(AbstractCompiler.java:58) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AdaptiveCompiler.compile(AdaptiveCompiler.java:45) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtensionClass(ExtensionLoader.java:863) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtensionClass(ExtensionLoader.java:856) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:845) ~[dubbo-2.7.3.jar:2.7.3]
+	... 54 common frames omitted
+
+2026-07-28 17:11:19.114  INFO 6760 --- [main] d.s.b.c.e.WelcomeLogoApplicationListener : 
+
+ :: Dubbo Spring Boot (v2.7.3) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.3) : https://github.com/apache/incubator-dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2026-07-28 17:11:19.118  INFO 6760 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.threadpool=fixed, dubbo.protocol.threads=64, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2026-07-28 17:11:19.205  INFO 6760 --- [main] dubboImplTest.UserServiceImplTest        : Starting UserServiceImplTest on KanoLap with PID 6760 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2026-07-28 17:11:19.205  INFO 6760 --- [main] dubboImplTest.UserServiceImplTest        : No active profile set, falling back to default profiles: default
+2026-07-28 17:11:19.703  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2026-07-28 17:11:19.704  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2026-07-28 17:11:19.705  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2026-07-28 17:11:19.735  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-07-28 17:11:19.737  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-28 17:11:19.760  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2026-07-28 17:11:20.043  INFO 6760 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:20.094  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:20.120  INFO 6760 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2026-07-28 17:11:20.170  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$a48586ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:20.281  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:20.287  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:20.288  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:20.289  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:20.365  INFO 6760 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2026-07-28 17:11:20.367  INFO 6760 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2026-07-28 17:11:20.415  INFO 6760 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-07-28 17:11:20.553  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-07-28 17:11:21.327  INFO 6760 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2026-07-28 17:11:21.328  INFO 6760 --- [main] c.g.dozermapper.core.util.RuntimeUtils   : OSGi support is false
+2026-07-28 17:11:21.332  INFO 6760 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2026-07-28 17:11:21.335  INFO 6760 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2026-07-28 17:11:21.339  INFO 6760 --- [main] c.g.d.core.el.ELExpressionFactory        : javax.el support is true
+2026-07-28 17:11:21.523  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2026-07-28 17:11:21.529  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2026-07-28 17:11:21.553  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2026-07-28 17:11:21.570  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2026-07-28 17:11:21.949  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2026-07-28 17:11:21.963  INFO 6760 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-07-28 17:11:21.963  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2026-07-28 17:11:21.964  INFO 6760 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2026-07-28 17:11:21.965  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-07-28 17:11:21.965  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-07-28 17:11:21.965  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2026-07-28 17:11:21.965  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@fd87c22
+2026-07-28 17:11:22.199  WARN 6760 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+2026-07-28 17:11:22.199  INFO 6760 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2026-07-28 17:11:22.200  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-07-28 17:11:22.200  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-07-28 17:11:22.200  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-07-28 17:11:22.224  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-07-28 17:11:22.225  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-07-28 17:11:22.225  INFO 6760 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2026-07-28 17:11:22.235  INFO 6760 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-07-28 17:11:22.242 ERROR 6760 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to create adaptive instance: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:486) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.config.ServiceConfig.<clinit>(ServiceConfig.java:119) ~[dubbo-2.7.3.jar:2.7.3]
+	... 52 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:847) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:482) ~[dubbo-2.7.3.jar:2.7.3]
+	... 53 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
+	at javassist.ClassPool.toClass2(ClassPool.java:1181) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.ClassPool.toClass(ClassPool.java:1164) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.CtClass.toClass(CtClass.java:1305) ~[javassist-3.20.0-GA.jar:na]
+	at org.apache.dubbo.common.compiler.support.JavassistCompiler.doCompile(JavassistCompiler.java:82) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AbstractCompiler.compile(AbstractCompiler.java:58) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AdaptiveCompiler.compile(AdaptiveCompiler.java:45) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtensionClass(ExtensionLoader.java:863) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtensionClass(ExtensionLoader.java:856) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:845) ~[dubbo-2.7.3.jar:2.7.3]
+	... 54 common frames omitted
+
+2026-07-28 17:11:22.274  INFO 6760 --- [main] e.OverrideDubboConfigApplicationListener : Dubbo Config was overridden by externalized configuration {dubbo.application.name=kano-project-provider, dubbo.application.qos-enable=false, dubbo.config.multiple=true, dubbo.protocol.threadpool=fixed, dubbo.protocol.threads=64, dubbo.provider.timeout=50000, dubbo.registry.address=zookeeper://175.178.101.42:2181}
+2026-07-28 17:11:22.285  INFO 6760 --- [main] dubboImplTest.UserServiceImplTest        : Starting UserServiceImplTest on KanoLap with PID 6760 (started by 51227 in D:\javaProgram\KanoProject\kano-project-parent\kano-project-provider\kano-project-provider-provider)
+2026-07-28 17:11:22.286  INFO 6760 --- [main] dubboImplTest.UserServiceImplTest        : No active profile set, falling back to default profiles: default
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, class : org.apache.dubbo.config.ApplicationConfig] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ApplicationConfig#0] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.RegistryConfig#0, class : org.apache.dubbo.config.RegistryConfig] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.RegistryConfig#0] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProtocolConfig#0, class : org.apache.dubbo.config.ProtocolConfig] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProtocolConfig#0] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The dubbo config bean definition [name : org.apache.dubbo.config.ProviderConfig#0, class : org.apache.dubbo.config.ProviderConfig] has been registered.
+2026-07-28 17:11:22.520  INFO 6760 --- [main] .a.d.c.s.c.a.DubboConfigBindingRegistrar : The BeanPostProcessor bean definition [org.apache.dubbo.config.spring.beans.factory.annotation.DubboConfigBindingBeanPostProcessor] for dubbo config bean [name : org.apache.dubbo.config.ProviderConfig#0] has been registered.
+2026-07-28 17:11:22.528  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2026-07-28 17:11:22.528  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-07-28 17:11:22.536  INFO 6760 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2026-07-28 17:11:22.578  INFO 6760 --- [main] ptablePropertiesBeanFactoryPostProcessor : Post-processing PropertySource instances
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:22.586  INFO 6760 --- [main] c.u.j.EncryptablePropertySourceConverter : Converting PropertySource defaultProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2026-07-28 17:11:22.594  INFO 6760 --- [main] c.u.j.filter.DefaultLazyPropertyFilter   : Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+2026-07-28 17:11:22.630  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboRelaxedBinding2AutoConfiguration$$EnhancerBySpringCGLIB$$a48586ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:22.654  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:22.658  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:22.658  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:22.659  INFO 6760 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'relaxedDubboConfigBinder' of type [org.apache.dubbo.spring.boot.autoconfigure.BinderDubboConfigBinder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2026-07-28 17:11:22.686  INFO 6760 --- [main] c.u.j.r.DefaultLazyPropertyResolver      : Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2026-07-28 17:11:22.686  INFO 6760 --- [main] c.u.j.d.DefaultLazyPropertyDetector      : Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2026-07-28 17:11:22.705  INFO 6760 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-07-28 17:11:22.743  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2026-07-28 17:11:22.969  INFO 6760 --- [main] c.g.d.core.DozerBeanMapperBuilder        : Initializing Dozer. Version: 6.5.0, Thread Name: main
+2026-07-28 17:11:22.969  INFO 6760 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Trying to find Dozer configuration file: dozer.properties
+2026-07-28 17:11:22.971  INFO 6760 --- [main] d.c.c.r.LegacyPropertiesSettingsResolver : Failed to find dozer.properties via com.github.dozermapper.core.config.resolvers.LegacyPropertiesSettingsResolver.
+2026-07-28 17:11:23.023  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ApplicationConfig#0] have been binding by prefix of configuration properties : dubbo.application
+2026-07-28 17:11:23.029  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.RegistryConfig#0] have been binding by prefix of configuration properties : dubbo.registry
+2026-07-28 17:11:23.033  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProtocolConfig#0] have been binding by prefix of configuration properties : dubbo.protocol
+2026-07-28 17:11:23.040  INFO 6760 --- [main] .f.a.DubboConfigBindingBeanPostProcessor : The properties of bean [name : org.apache.dubbo.config.ProviderConfig#0] have been binding by prefix of configuration properties : dubbo.provider
+2026-07-28 17:11:23.246  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2026-07-28 17:11:23.246  INFO 6760 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2026-07-28 17:11:23.246  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2026-07-28 17:11:23.246  INFO 6760 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2026-07-28 17:11:23.248  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2026-07-28 17:11:23.248  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2026-07-28 17:11:23.248  INFO 6760 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2026-07-28 17:11:23.248  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@308c65e0
+2026-07-28 17:11:23.294  WARN 6760 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+2026-07-28 17:11:23.294  INFO 6760 --- [main] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+2026-07-28 17:11:23.294  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2026-07-28 17:11:23.294  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2026-07-28 17:11:23.294  INFO 6760 --- [main] org.quartz.core.QuartzScheduler          : Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2026-07-28 17:11:23.296  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2026-07-28 17:11:23.297  INFO 6760 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2026-07-28 17:11:23.297  INFO 6760 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2026-07-28 17:11:23.299  INFO 6760 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-07-28 17:11:23.300 ERROR 6760 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache.dubbo.config.spring.ServiceBean
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 43 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	... 23 common frames omitted
+
+2026-07-28 17:11:23.303 ERROR 6760 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@624ea235] to prepare test instance [dubboImplTest.UserServiceImplTest@5f9edf14]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceBean:service.RepairInfoService': Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.0.RELEASE.jar:2.3.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	... 27 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1312) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 44 common frames omitted
+Caused by: java.lang.IllegalStateException: Failed to create adaptive instance: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:486) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.config.ServiceConfig.<clinit>(ServiceConfig.java:119) ~[dubbo-2.7.3.jar:2.7.3]
+	... 52 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't create adaptive extension interface org.apache.dubbo.rpc.Protocol, cause: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:847) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtension(ExtensionLoader.java:482) ~[dubbo-2.7.3.jar:2.7.3]
+	... 53 common frames omitted
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @50c87b21
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:354) ~[na:na]
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(AccessibleObject.java:297) ~[na:na]
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Method.java:199) ~[na:na]
+	at java.base/java.lang.reflect.Method.setAccessible(Method.java:193) ~[na:na]
+	at javassist.ClassPool.toClass2(ClassPool.java:1181) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.ClassPool.toClass(ClassPool.java:1164) ~[javassist-3.20.0-GA.jar:na]
+	at javassist.CtClass.toClass(CtClass.java:1305) ~[javassist-3.20.0-GA.jar:na]
+	at org.apache.dubbo.common.compiler.support.JavassistCompiler.doCompile(JavassistCompiler.java:82) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AbstractCompiler.compile(AbstractCompiler.java:58) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.compiler.support.AdaptiveCompiler.compile(AdaptiveCompiler.java:45) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtensionClass(ExtensionLoader.java:863) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.getAdaptiveExtensionClass(ExtensionLoader.java:856) ~[dubbo-2.7.3.jar:2.7.3]
+	at org.apache.dubbo.common.extension.ExtensionLoader.createAdaptiveExtension(ExtensionLoader.java:845) ~[dubbo-2.7.3.jar:2.7.3]
+	... 54 common frames omitted
+
