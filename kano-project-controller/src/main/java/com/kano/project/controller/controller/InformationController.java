@@ -220,7 +220,7 @@ public class InformationController {
         if(BigDecimal.valueOf(100).compareTo(BigDecimal.valueOf(percent)) == 0){
             return patientSumAfterPercent;
         }
-        //产生从-0.02带0.02之间的随机数，为抽取比例加随机数n
+        //产生从-0.02到0.02之间的随机数，为抽取比例加随机数n
         double localRandom = ThreadLocalRandom.current().nextDouble(-0.002, 0.002);
         return (BigDecimal.valueOf(((percent / 100.0) + localRandom) * patientSumAfterPercent))
                 .setScale(0,RoundingMode.CEILING).intValue();
