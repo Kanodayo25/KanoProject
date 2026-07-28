@@ -1,14 +1,23 @@
 package dubboImplTest;
 
 
-import com.kano.project.common.utils.Base64Utils;
+import com.kano.project.provider.KanoProjectProviderApplication;
+import com.kano.project.provider.dao.AiDao;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = KanoProjectProviderApplication.class)
 public class AiServiceTest {
 
-    public static void main(String[] args) {
-        String encode = Base64Utils.encode("sk-ws-H.EIRHPYD.eWZR.MEUCIF3yYDqPbD4bn_QhE6pO0trv0ohd5HnCAMqMjOxNM8DfAiEA4rNyFi5_QJeSZ_so2SfKVz8c_W338rKEpvYqRSV-tNQ");
-        String decode = Base64Utils.decode(encode);
-        System.out.println("encode:"+encode);
-        System.out.println("decode:"+decode);
+    @Autowired
+    private AiDao aiDao;
+
+    @Test
+    public void AiProjectTest(){
+        aiDao.doChat("1");
     }
 }
