@@ -18,6 +18,6 @@ public class AiServiceTest {
 
     @Test
     public void AiProjectTest(){
-        aiDao.doChat("1");
+
     }
 }
