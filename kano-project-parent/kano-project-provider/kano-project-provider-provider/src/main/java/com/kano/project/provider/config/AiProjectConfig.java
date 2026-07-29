@@ -5,6 +5,7 @@ import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +24,7 @@ public class AiProjectConfig {
     @Value("${langchain4j.open-ai.chat-model.base-url}")
     private String baseUrl;
 
-    @Bean
+    @PostConstruct
     public void decodeApiKey() {
         QwenApiKey = Base64Utils.decode(encodeKey);
     }
