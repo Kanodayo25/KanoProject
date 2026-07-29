@@ -19,8 +19,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -56,8 +56,7 @@ public class InformationController {
         List<OutpatientDepartmentImportVO> filtedOriginalDataVos = new ArrayList<>();
         
         //导入Excel获取数据
-        OutpatientDepartmentImportVO importVOs = new OutpatientDepartmentImportVO();
-        List<Object> importObjs = ExcelUtil.readExcel(file, importVOs);
+        List<Object> importObjs = ExcelUtil.readExcel(file, OutpatientDepartmentImportVO.class);
         List<OutpatientDepartmentImportVO> importDataList = importObjs.stream()
                 .map(obj -> (OutpatientDepartmentImportVO) obj)
                 .collect(Collectors.toList());

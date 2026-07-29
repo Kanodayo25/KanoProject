@@ -7,9 +7,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class AiDaoImpl implements AiDao {
 
-    @Override
-    public String doChat(String message) {
-        return null;
-
-    }
 }

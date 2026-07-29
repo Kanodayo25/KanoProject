@@ -2,7 +2,6 @@ package com.kano.project.controller.controller.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.annotation.write.style.ColumnWidth;
-import com.alibaba.excel.metadata.BaseRowModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OutPatientDepartmentExportVO extends BaseRowModel {
+public class OutPatientDepartmentExportVO {
 
     @ExcelProperty(value = "科室（门诊）")
     @ColumnWidth(value = 25)

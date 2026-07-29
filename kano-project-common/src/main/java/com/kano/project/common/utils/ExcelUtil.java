@@ -1,16 +1,15 @@
 package com.kano.project.common.utils;
 
-import com.alibaba.excel.ExcelReader;
+import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
-import com.alibaba.excel.metadata.BaseRowModel;
-import com.alibaba.excel.metadata.Sheet;
-import com.alibaba.excel.support.ExcelTypeEnum;
+import com.alibaba.excel.read.listener.ReadListener;
+import com.alibaba.excel.write.metadata.WriteSheet;
 import com.kano.project.common.Exception.ExcelException;
 import com.kano.project.common.factory.ExcelWriterFactory;
 import com.kano.project.common.listenner.ExcelListener;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.List;
 
@@ -27,28 +26,16 @@ public class ExcelUtil {
      * 读取 Excel(多个 sheet)
      *
      * @param excel    文件
-     * @param rowModel 实体类映射，继承 BaseRowModel 类
+     * @param clazz    实体类映射
      * @return Excel 数据 list
      */
-    public static List<Object> readExcel(MultipartFile excel, BaseRowModel rowModel) {
-        ExcelListener excelListener = new ExcelListener();
-        ExcelReader reader = getReader(excel, excelListener);
-        if (reader == null) {
-            return null;
-        }
-        try {
-            for (Sheet sheet : reader.getSheets()) {
-                if (rowModel != null) {
-                    sheet.setClazz(rowModel.getClass());
-                }
-                reader.read(sheet);
-            }
+    public static <T> List<Object> readExcel(MultipartFile excel, Class<T> clazz) {
+        ExcelListener<T> excelListener = new ExcelListener<>();
+        try (InputStream inputStream = new BufferedInputStream(excel.getInputStream())) {
+            EasyExcel.read(inputStream, clazz, excelListener).doReadAll();
             return excelListener.getDatas();
-        } finally {
-            // 关闭资源，防止内存泄漏
-            if (reader != null) {
-                reader.finish();
-            }
+        } catch (IOException e) {
+            throw new ExcelException("读取Excel失败！");
         }
     }
 
@@ -56,38 +43,34 @@ public class ExcelUtil {
      * 读取某个 sheet 的 Excel
      *
      * @param excel    文件
-     * @param rowModel 实体类映射，继承 BaseRowModel 类
+     * @param clazz    实体类映射
      * @param sheetNo  sheet 的序号 从1开始
      * @return Excel 数据 list
      */
-    public static List<Object> readExcel(MultipartFile excel, BaseRowModel rowModel, int sheetNo) {
-        return readExcel(excel, rowModel, sheetNo, 1);
+    public static <T> List<Object> readExcel(MultipartFile excel, Class<T> clazz, int sheetNo) {
+        return readExcel(excel, clazz, sheetNo, 1);
     }
 
     /**
      * 读取某个 sheet 的 Excel
      *
      * @param excel       文件
-     * @param rowModel    实体类映射，继承 BaseRowModel 类
+     * @param clazz       实体类映射
      * @param sheetNo     sheet 的序号 从1开始
      * @param headLineNum 表头行数，默认为1
      * @return Excel 数据 list
      */
-    public static List<Object> readExcel(MultipartFile excel, BaseRowModel rowModel, int sheetNo,
-                                         int headLineNum) {
-        ExcelListener excelListener = new ExcelListener();
-        ExcelReader reader = getReader(excel, excelListener);
-        if (reader == null) {
-            return null;
-        }
-        try {
-            reader.read(new Sheet(sheetNo, headLineNum, rowModel.getClass()));
+    public static <T> List<Object> readExcel(MultipartFile excel, Class<T> clazz, int sheetNo,
+                                              int headLineNum) {
+        ExcelListener<T> excelListener = new ExcelListener<>();
+        try (InputStream inputStream = new BufferedInputStream(excel.getInputStream())) {
+            EasyExcel.read(inputStream, clazz, excelListener)
+                    .sheet(sheetNo - 1)  // EasyExcel 3.x sheet 从0开始
+                    .headRowNumber(headLineNum)
+                    .doRead();
             return excelListener.getDatas();
-        } finally {
-            // 关闭资源，防止内存泄漏
-            if (reader != null) {
-                reader.finish();
-            }
+        } catch (IOException e) {
+            throw new ExcelException("读取Excel失败！");
         }
     }
 
@@ -95,25 +78,20 @@ public class ExcelUtil {
      * 导出 Excel ：一个 sheet，带表头
      *
      * @param response  HttpServletResponse
-     * @param list      数据 list，每个元素为一个 BaseRowModel
+     * @param list      数据 list
      * @param fileName  导出的文件名
      * @param sheetName 导入文件的 sheet 名
-     * @param object    映射实体类，Excel 模型
+     * @param clazz     映射实体类，Excel 模型
      */
-    public static void writeExcel(HttpServletResponse response, List<? extends BaseRowModel> list,
-                                  String fileName, String sheetName, BaseRowModel object) {
-        ExcelWriter writer = null;
+    public static <T> void writeExcel(HttpServletResponse response, List<T> list,
+                                      String fileName, String sheetName, Class<T> clazz) {
         try {
-            writer = new ExcelWriter(getOutputStream(fileName, response), ExcelTypeEnum.XLSX);
-            Sheet sheet = new Sheet(1, 0, object.getClass());
-            sheet.setSheetName(sheetName);
-            writer.write(list, sheet);
-            writer.finish();
-        } finally {
-            // 确保资源被关闭
-            if (writer != null) {
-                writer.finish();
-            }
+            OutputStream outputStream = getOutputStream(fileName, response);
+            EasyExcel.write(outputStream, clazz)
+                    .sheet(sheetName)
+                    .doWrite(list);
+        } catch (Exception e) {
+            throw new ExcelException("导出Excel失败！");
         }
     }
 
@@ -121,25 +99,30 @@ public class ExcelUtil {
      * 导出 Excel ：多个 sheet，带表头
      *
      * @param response  HttpServletResponse
-     * @param list      数据 list，每个元素为一个 BaseRowModel
+     * @param list      数据 list
      * @param fileName  导出的文件名
      * @param sheetName 导入文件的 sheet 名
-     * @param object    映射实体类，Excel 模型
+     * @param clazz     映射实体类，Excel 模型
      */
-    public static ExcelWriterFactory writeExcelWithSheets(HttpServletResponse response, List<? extends BaseRowModel> list,
-                                                          String fileName, String sheetName, BaseRowModel object) {
-        ExcelWriterFactory writer = new ExcelWriterFactory(getOutputStream(fileName, response), ExcelTypeEnum.XLSX);
-        Sheet sheet = new Sheet(1, 0, object.getClass());
-        sheet.setSheetName(sheetName);
-        writer.write(list, sheet);
-        return writer;
+    public static <T> ExcelWriterFactory writeExcelWithSheets(HttpServletResponse response, List<T> list,
+                                                              String fileName, String sheetName, Class<T> clazz) {
+        try {
+            OutputStream outputStream = getOutputStream(fileName, response);
+            ExcelWriter writer = EasyExcel.write(outputStream, clazz).build();
+            WriteSheet writeSheet = EasyExcel.writerSheet(sheetName).build();
+            writer.write(list, writeSheet);
+            ExcelWriterFactory factory = new ExcelWriterFactory();
+            factory.setWriter(writer);
+            return factory;
+        } catch (Exception e) {
+            throw new ExcelException("导出Excel失败！");
+        }
     }
 
     /**
      * 导出文件时为Writer生成OutputStream
      */
     private static OutputStream getOutputStream(String fileName, HttpServletResponse response) {
-        //创建本地文件
         String filePath = fileName + ".xlsx";
         File dbfFile = new File(filePath);
         try {
@@ -152,27 +135,5 @@ public class ExcelUtil {
         } catch (IOException e) {
             throw new ExcelException("创建文件失败！");
         }
-    }
-
-    /**
-     * 返回 ExcelReader
-     *
-     * @param excel         需要解析的 Excel 文件
-     * @param excelListener new ExcelListener()
-     */
-    private static ExcelReader getReader(MultipartFile excel,
-                                         ExcelListener excelListener) {
-        String filename = excel.getOriginalFilename();
-        if (filename == null || (!filename.toLowerCase().endsWith(".xls") && !filename.toLowerCase().endsWith(".xlsx"))) {
-            throw new ExcelException("文件格式错误！");
-        }
-        InputStream inputStream;
-        try {
-            inputStream = new BufferedInputStream(excel.getInputStream());
-            return new ExcelReader(inputStream, null, excelListener, false);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

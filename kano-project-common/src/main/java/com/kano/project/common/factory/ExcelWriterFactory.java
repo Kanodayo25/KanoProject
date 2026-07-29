@@ -1,9 +1,8 @@
 package com.kano.project.common.factory;
 
+import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelWriter;
-import com.alibaba.excel.metadata.BaseRowModel;
-import com.alibaba.excel.metadata.Sheet;
-import com.alibaba.excel.support.ExcelTypeEnum;
+import com.alibaba.excel.write.metadata.WriteSheet;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -17,37 +16,36 @@ import java.util.List;
  * @Date 2018-06-07
  * @Time 16:47
  */
-public class ExcelWriterFactory extends ExcelWriter {
+public class ExcelWriterFactory {
+    private ExcelWriter writer;
     private OutputStream outputStream;
     private int sheetNo = 1;
 
-    public ExcelWriterFactory(OutputStream outputStream, ExcelTypeEnum typeEnum) {
-        super(outputStream, typeEnum);
-        this.outputStream = outputStream;
+    public ExcelWriterFactory() {
     }
 
-    public ExcelWriterFactory write(List<? extends BaseRowModel> list, String sheetName,
-                                    BaseRowModel object) {
+    public void setWriter(ExcelWriter writer) {
+        this.writer = writer;
+    }
+
+    public <T> ExcelWriterFactory write(List<T> list, String sheetName, Class<T> clazz) {
         this.sheetNo++;
         try {
-            Sheet sheet = new Sheet(sheetNo, 0, object.getClass());
-            sheet.setSheetName(sheetName);
-            this.write(list, sheet);
+            WriteSheet writeSheet = EasyExcel.writerSheet(sheetNo, sheetName).head(clazz).build();
+            writer.write(list, writeSheet);
         } catch (Exception ex) {
             ex.printStackTrace();
-            // 异常时不需要flush，在finish中统一处理
         }
         return this;
     }
 
-    @Override
     public void finish() {
-        super.finish();
+        if (writer != null) {
+            writer.finish();
+        }
         try {
             if (outputStream != null) {
                 outputStream.flush();
-                // 注意：不要在这里关闭outputStream，因为它是由外部传入的
-                // 由调用方负责关闭，通常是ServletOutputStream会自动关闭
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +54,6 @@ public class ExcelWriterFactory extends ExcelWriter {
 
     /**
      * 关闭资源，释放内存
-     * 注意：仅在非ServletOutputStream的情况下调用
      */
     public void close() {
         try {

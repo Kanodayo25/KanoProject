@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import service.UserService;
 
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 
 @Api(tags = "用户中心", value = "user")
 @RestController

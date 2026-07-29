@@ -5,5 +5,4 @@ import com.kano.project.common.model.Result;
 
 public interface AiDao {
 
-    String doChat(String message);
 }

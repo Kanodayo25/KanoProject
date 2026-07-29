@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <artifactId>kano-project-parent</artifactId>
+        <groupId>kano-project-parent</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../kano-project-parent/pom.xml</relativePath>
+    </parent>
+
     <groupId>kano-project-common</groupId>
     <artifactId>kano-project-common</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -55,7 +62,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>${spring-web.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -66,13 +72,18 @@
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
-            <version>${validate-api.version}</version>
+        </dependency>
+        <!-- Jakarta Servlet API（供 ExcelUtil 使用） -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson-spring-boot-starter</artifactId>
-            <version>3.11.5</version>
+            <version>${redisson.version}</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -209,57 +220,6 @@
             <scope>compile</scope>
         </dependency>-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <artifactId>slf4j-api</artifactId>
-                    <groupId>org.slf4j</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-beans</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-core</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-context</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>byte-buddy</artifactId>
-                    <groupId>net.bytebuddy</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.github.dozermapper</groupId>
-            <artifactId>dozer-spring-boot-starter</artifactId>
-            <version>${dozer.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>spring-boot-autoconfigure</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>snakeyaml</artifactId>
-                    <groupId>org.yaml</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-boot</artifactId>
-                    <groupId>org.springframework.boot</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>spring-core</artifactId>
-                    <groupId>org.springframework</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
             <version>${dubbo.version}</version>
@@ -282,7 +242,7 @@
 
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
             <version>${mybatis-plus-boot-starter.version}</version>
             <exclusions>
                 <exclusion>
@@ -311,7 +271,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
-            <version>2.2.3</version>
+            <version>${easyexcel.version}</version>
             <scope>compile</scope>
         </dependency>
 
@@ -326,35 +286,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <tencent.cos.api>5.6.227</tencent.cos.api>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <dozer.version>6.5.0</dozer.version>
-        <java.version>17</java.version>
-        <dozer.version>6.5.0</dozer.version>
-        <swagger.version>2.9.2</swagger.version>
-        <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
-        <mapstruct.version>1.2.0.Final</mapstruct.version>
-        <fastjson.version>1.2.83</fastjson.version>
-        <springframework.version>3.2.2.RELEASE</springframework.version>
-        <gson.version>2.8.6</gson.version>
-        <spring-web.version>5.2.6.RELEASE</spring-web.version>
-        <cos_api.version>5.6.24</cos_api.version>
-        <apollo-client.version>1.4.0</apollo-client.version>
-        <validate-api.version>2.0.2</validate-api.version>
-        <frxsframework-integration.version>1.0.8</frxsframework-integration.version>
-        <settlement-basic-api.version>1.0.0-SNAPSHOT</settlement-basic-api.version>
-        <kryo.version>4.0.2</kryo.version>
-        <tms.version>9.3.0-SNAPSHOT</tms.version>
-        <sharding-jdbc.version>4.0.0-RC1</sharding-jdbc.version>
-        <druid.version>1.1.21</druid.version>
-        <elasticsearch.version>6.8.10</elasticsearch.version>
-        <jedis.version>3.3.0</jedis.version>
-        <javers.version>5.12.0</javers.version>
-        <log4j2.version>2.17.1</log4j2.version>
-        <commons-collections4>4.1</commons-collections4>
-        <dubbo.version>2.7.3</dubbo.version>
-        <p6spy.version>1.9.1</p6spy.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
 </project>

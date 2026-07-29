@@ -1,7 +1,9 @@
 package com.kano.project.provider.config;
 
 import com.kano.project.common.utils.Base64Utils;
+import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -14,13 +16,11 @@ public class AiProjectConfig {
 
     public static String QwenApiKey;
 
-    @Value("${ai.qwen.apiKey}")
+    @Value("${langchain4j.open-ai.chat-model.api-key}")
     public String encodeKey;
-    @Value("${llm.openai.api-key}")
-    private String apiKey;
-    @Value("${llm.openai.model:qwen-plus}")
+    @Value("${langchain4j.open-ai.chat-model.model-name}")
     private String modelName;
-    @Value("${llm.openai.base-url:https://dashscope.aliyuncs.com/compatible-mode/v1}")
+    @Value("${langchain4j.open-ai.chat-model.base-url}")
     private String baseUrl;
 
     @Bean
@@ -31,7 +31,7 @@ public class AiProjectConfig {
     @Bean
     public OpenAiChatModel chatModel() {
         return OpenAiChatModel.builder()
-                .apiKey(apiKey)
+                .apiKey(QwenApiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)                    // 关键：指向通义千问
                 .timeout(Duration.ofSeconds(30))
@@ -45,7 +45,7 @@ public class AiProjectConfig {
     @Bean
     public OpenAiStreamingChatModel streamingChatModel() {
         return OpenAiStreamingChatModel.builder()
-                .apiKey(apiKey)
+                .apiKey(QwenApiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(60))
@@ -54,14 +54,14 @@ public class AiProjectConfig {
                 .build();
     }
 
-/*    @Bean
+    @Bean
     public EmbeddingModel embeddingModel() {
         return OpenAiEmbeddingModel.builder()
-                .apiKey(apiKey)
+                .apiKey(QwenApiKey)
                 .modelName("text-embedding-v3")
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(30))
                 .build();
-    }*/
+    }
 }
 

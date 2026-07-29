@@ -12,14 +12,10 @@
         <artifactId>kano-project-parent</artifactId>
         <groupId>kano-project-parent</groupId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../kano-project-parent/pom.xml</relativePath>
     </parent>
 
     <properties>
-        <!--sa-token-->
-        <sa.token.version>1.38.0</sa.token.version>
-        <swagger.version>2.9.2</swagger.version>
-        <swagger.dep.version>1.5.21</swagger.dep.version>
-
         <kano-project-common-version>1.0.0-SNAPSHOT</kano-project-common-version>
         <kano-project-project-version>1.0.0-SNAPSHOT</kano-project-project-version>
     </properties>
@@ -39,7 +35,7 @@
                     <groupId>org.springframework</groupId>
                 </exclusion>
                 <exclusion>
-                    <artifactId>mybatis-plus-boot-starter</artifactId>
+                    <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
                     <groupId>com.baomidou</groupId>
                 </exclusion>
                 <exclusion>
@@ -73,27 +69,25 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>2.3.0.RELEASE</version>
         </dependency>
 
 
-        <!--swagger-->
+        <!--swagger (SpringDoc OpenAPI，兼容旧 @Api 注解)-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${swagger.version}</version>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>${springdoc.version}</version>
         </dependency>
-
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${swagger.version}</version>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.6.14</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-            <version>2.8.0</version>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -105,7 +99,7 @@
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
-            <version>2.8.0</version>
+            <version>${curator.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.google.guava</groupId>
@@ -118,7 +112,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
-            <version>2.2.3</version>
+            <version>${easyexcel.version}</version>
         </dependency>
 
 
@@ -126,7 +120,7 @@
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot-starter</artifactId>
-            <version>${sa.token.version}</version>
+            <version>${sa-token.version}</version>
         </dependency>
     </dependencies>
 

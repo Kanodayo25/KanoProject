@@ -11,42 +11,52 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.0.RELEASE</version>
+        <version>3.2.12</version>
         <relativePath></relativePath>
     </parent>
 
     <packaging>pom</packaging>
 
+    <modules>
+        <module>../kano-project-common</module>
+        <module>../kano-project-controller</module>
+        <module>kano-project-provider</module>
+    </modules>
+
     <properties>
-        <!-- *************************************************************************** 开源组件-->
-        <easyexcel.version>2.2.3</easyexcel.version>
+        <!-- 开源组件 -->
+        <easyexcel.version>3.3.4</easyexcel.version>
         <apollo-client.version>1.4.0</apollo-client.version>
-        <jasypt-spring-boot-starter.version> 2.1.0</jasypt-spring-boot-starter.version>
-        <druid.version>1.1.21</druid.version>
-        <mybatis-spring-boot-starter.version>2.1.1</mybatis-spring-boot-starter.version>
-        <mybatis-plus-boot-starter.version>3.3.1</mybatis-plus-boot-starter.version>
-        <dynamic-datasource.version>3.0.0</dynamic-datasource.version>
+        <jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
+        <druid.version>1.2.22</druid.version>
+        <mybatis-plus-boot-starter.version>3.5.6</mybatis-plus-boot-starter.version>
+        <dynamic-datasource.version>4.3.1</dynamic-datasource.version>
         <lombok.version>1.18.30</lombok.version>
-        <dozer.version>6.5.0</dozer.version>
-        <fastjson.version>1.2.61</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
-        <mapstruct.version>1.2.0.Final</mapstruct.version>
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
         <org.jetbrains>17.0.0</org.jetbrains>
-        <validation-api.version>2.0.1.Final</validation-api.version>
-        <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
-        <redisson.version>3.11.5</redisson.version>
-        <javax.el.version>3.0.0</javax.el.version>
         <msg-common-client-http.version>2.2.5-RELEASE</msg-common-client-http.version>
         <sharding-jdbc.version>4.0.0-RC1</sharding-jdbc.version>
         <cos_api.version>5.6.24</cos_api.version>
-        <junit.version>4.12</junit.version>
-        <spring-boot-strater-test.version>2.7.0</spring-boot-strater-test.version>
-        <swagger.ui.version>2.9.2</swagger.ui.version>
-        <mysql.version>8.0.20</mysql.version>
-        <!--spring boot的工程版本-->
+        <mysql.version>8.2.0</mysql.version>
         <kylin.sdk.version>3.1.0-RELEASE</kylin.sdk.version>
 
+        <!-- 跨模块共享属性 -->
+        <java.version>17</java.version>
+        <elasticsearch.version>6.8.10</elasticsearch.version>
+        <gson.version>2.8.6</gson.version>
+        <validate-api.version>2.0.2</validate-api.version>
+        <commons-collections4>4.1</commons-collections4>
+        <dubbo.version>3.2.14</dubbo.version>
+        <p6spy.version>1.9.1</p6spy.version>
+        <tencent.cos.api>5.6.227</tencent.cos.api>
 
+        <!-- Spring Boot 3.x 新依赖 -->
+        <springdoc.version>2.6.0</springdoc.version>
+        <curator.version>5.6.0</curator.version>
+        <sa-token.version>1.39.0</sa-token.version>
+        <redisson.version>3.33.0</redisson.version>
     </properties>
 
     <dependencies>
