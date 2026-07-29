@@ -27,7 +27,6 @@ public class AiServiceImpl implements AiService {
     public Result<String> doChat(String message) {
         AiChatDao chatService = AiServices.create(AiChatDao.class, openAiChatModel);
         String answer = chatService.doChat(message);
-        log.info("answer: " + answer);
         return Result.success(answer);
     }
 }
