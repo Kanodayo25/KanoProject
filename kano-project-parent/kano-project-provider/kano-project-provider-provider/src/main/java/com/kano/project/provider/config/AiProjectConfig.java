@@ -6,12 +6,14 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.Duration;
 
+@Slf4j
 @Configuration
 public class AiProjectConfig {
 
@@ -31,11 +33,14 @@ public class AiProjectConfig {
 
     @Bean
     public OpenAiChatModel chatModel() {
+        log.info(encodeKey);
+        log.info(modelName);
+        log.info(baseUrl);
         return OpenAiChatModel.builder()
                 .apiKey(QwenApiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)                    // 关键：指向通义千问
-                .timeout(Duration.ofSeconds(30))
+                .timeout(Duration.ofSeconds(120))
                 .temperature(0.7)
                 .maxTokens(2000)
                 .logRequests(true)                   // 开发期打印请求日志
