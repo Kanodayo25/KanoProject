@@ -60,15 +60,15 @@
             <version>${druid.version}</version>
         </dependency>
 
-        <!-- mybatis-spring-boot-starter（排除 mybatis 核心，由 mybatis-plus 管理版本） -->
+        <!-- mybatis-spring-boot-starter 的 MybatisAutoConfiguration 被 mybatis-plus 引用，不能删除 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>3.0.3</version>
             <exclusions>
                 <exclusion>
-                    <artifactId>mybatis</artifactId>
                     <groupId>org.mybatis</groupId>
+                    <artifactId>mybatis</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -102,6 +102,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- Dubbo Zookeeper 服务发现需要 curator-x-discovery -->
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-x-discovery</artifactId>
@@ -261,10 +262,9 @@
             <artifactId>langchain4j-spring-boot-starter</artifactId>
             <version>${langchain4j.version}</version>
         </dependency>
-        <!-- 已手动创建所有 Bean（AiProjectConfig），不使用 auto-config -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-open-ai</artifactId>
+            <artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
             <version>${langchain4j.version}</version>
         </dependency>
 

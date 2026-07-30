@@ -1,10 +1,15 @@
 package com.kano.project.provider.config;
 
 import com.kano.project.common.utils.Base64Utils;
+import com.kano.project.provider.repository.RedisChatMemoryStore;
+import dev.langchain4j.memory.ChatMemory;
+import dev.langchain4j.memory.chat.ChatMemoryProvider;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiStreamingChatModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,12 +24,15 @@ public class AiProjectConfig {
 
     public static String QwenApiKey;
 
-    @Value("${langchain4j.open-ai.chat-model.api-key}")
+    @Value("${model.api-key}")
     public String encodeKey;
-    @Value("${langchain4j.open-ai.chat-model.model-name}")
+    @Value("${model.name}")
     private String modelName;
-    @Value("${langchain4j.open-ai.chat-model.base-url}")
+    @Value("${model.base-url}")
     private String baseUrl;
+
+    @Autowired
+    private RedisChatMemoryStore redisChatMemoryStore;
 
     @PostConstruct
     public void decodeApiKey() {
@@ -33,9 +41,6 @@ public class AiProjectConfig {
 
     @Bean
     public OpenAiChatModel chatModel() {
-        log.info(encodeKey);
-        log.info(modelName);
-        log.info(baseUrl);
         return OpenAiChatModel.builder()
                 .apiKey(QwenApiKey)
                 .modelName(modelName)
@@ -68,6 +73,31 @@ public class AiProjectConfig {
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(30))
                 .build();
+    }
+
+    @Bean
+    public ChatMemory chatMemory() {
+
+        MessageWindowChatMemory memory = MessageWindowChatMemory.builder()
+                .maxMessages(20)
+                .build();
+        return memory;
+    }
+
+    //构建ChatMemoryProvider对象
+    @Bean
+    public ChatMemoryProvider chatMemoryProvider() {
+        ChatMemoryProvider chatMemoryProvider=new ChatMemoryProvider(){
+            @Override
+            public ChatMemory get(Object memoryId) {
+                return MessageWindowChatMemory.builder()
+                        .id(memoryId)
+                        .maxMessages(20)
+                        .chatMemoryStore(redisChatMemoryStore) // 设置存储对象
+                        .build();
+            }
+        };
+        return chatMemoryProvider;
     }
 }
 

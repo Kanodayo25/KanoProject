@@ -26,7 +26,7 @@ public class AiServiceTest {
     @Test
     public void AiProjectTest(){
         String message = "资料分析主要考察什么内容";
-        Result<String> stringResult = aiService.doChat(message);
+        Result<String> stringResult = aiService.doChat(1L,message);
         System.out.println(stringResult.getData());
     }
 
