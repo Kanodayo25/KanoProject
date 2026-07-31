@@ -8,7 +8,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.net.URI;
 import java.net.URL;
+import java.util.Locale;
 import java.util.Objects;
 
 @Slf4j
@@ -94,5 +96,60 @@ public class ImageUtils {
         //对字节数组Base64编码
         Base64Encoder encoder = new Base64Encoder();
         return encoder.encode(data);//返回Base64编码过的字节数组字符串
+    }
+    /**
+     * 获取图片URL后缀名
+     *
+     * @param imageUrl 图片地址
+     * @return 后缀名，例如 png、jpg；获取不到返回 null
+     */
+    public static String getImageSuffix(String imageUrl) {
+        if (imageUrl == null || imageUrl.isEmpty()) {
+            return null;
+        }
+
+        try {
+            // 解析URL，去掉参数部分
+            String path = new URI(imageUrl).getPath();
+
+            if (path == null || path.isEmpty()) {
+                return null;
+            }
+
+            // 获取最后一个点的位置
+            int lastDotIndex = path.lastIndexOf(".");
+
+            // 没有后缀
+            if (lastDotIndex == -1 || lastDotIndex == path.length() - 1) {
+                return null;
+            }
+
+            return path.substring(lastDotIndex + 1)
+                    .toLowerCase(Locale.ROOT);
+
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+    /**
+     * 获取图片的MineType类型格式
+     * @param suffix
+     * @return
+     */
+    public static String getMimeType(String suffix) {
+        if (suffix == null) {
+            return null;
+        }
+
+        return switch (suffix.toLowerCase()) {
+            case "jpg", "jpeg" -> "image/jpeg";
+            case "png" -> "image/png";
+            case "gif" -> "image/gif";
+            case "webp" -> "image/webp";
+            case "bmp" -> "image/bmp";
+            default -> "application/octet-stream";
+        };
     }
 }

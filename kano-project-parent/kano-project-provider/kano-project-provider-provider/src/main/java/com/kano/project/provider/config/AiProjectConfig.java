@@ -45,7 +45,7 @@ public class AiProjectConfig {
                 .apiKey(QwenApiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)                    // 关键：指向通义千问
-                .timeout(Duration.ofSeconds(120))
+                .timeout(Duration.ofSeconds(300))
                 .temperature(0.7)
                 .maxTokens(2000)
                 .logRequests(true)                   // 开发期打印请求日志
@@ -59,7 +59,7 @@ public class AiProjectConfig {
                 .apiKey(QwenApiKey)
                 .modelName(modelName)
                 .baseUrl(baseUrl)
-                .timeout(Duration.ofSeconds(60))
+                .timeout(Duration.ofSeconds(300))
                 .temperature(0.7)
                 .maxTokens(2000)
                 .build();
@@ -78,26 +78,20 @@ public class AiProjectConfig {
     @Bean
     public ChatMemory chatMemory() {
 
-        MessageWindowChatMemory memory = MessageWindowChatMemory.builder()
+        return MessageWindowChatMemory.builder()
                 .maxMessages(20)
                 .build();
-        return memory;
     }
 
     //构建ChatMemoryProvider对象
     @Bean
     public ChatMemoryProvider chatMemoryProvider() {
-        ChatMemoryProvider chatMemoryProvider=new ChatMemoryProvider(){
-            @Override
-            public ChatMemory get(Object memoryId) {
-                return MessageWindowChatMemory.builder()
-                        .id(memoryId)
-                        .maxMessages(20)
-                        .chatMemoryStore(redisChatMemoryStore) // 设置存储对象
-                        .build();
-            }
-        };
-        return chatMemoryProvider;
+        // 设置存储对象
+        return memoryId -> MessageWindowChatMemory.builder()
+                .id(memoryId)
+                .maxMessages(20)
+                .chatMemoryStore(redisChatMemoryStore) // 设置存储对象
+                .build();
     }
 }
 

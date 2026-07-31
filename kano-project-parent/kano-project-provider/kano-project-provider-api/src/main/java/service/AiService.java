@@ -8,5 +8,5 @@ public interface AiService {
      * @param message 提问
      * @return 回答
      */
-    Result<String> doChat(Long memoryId,String message);
+    Result<String> doChat(Long memoryId,String message,String file);
 }
