@@ -69,7 +69,7 @@ public class AiProjectConfig {
     public EmbeddingModel embeddingModel() {
         return OpenAiEmbeddingModel.builder()
                 .apiKey(QwenApiKey)
-                .modelName("text-embedding-v3")
+                .modelName("qwen3.7-text-embedding")
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(30))
                 .build();
