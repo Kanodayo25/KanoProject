@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="logo">🦉</view>
+  <view class="title">Kano的公考Ai助手</view>
+  <view class="subtitle">能回答就回答，不能回答就回答不会捏</view>
+
+  <button class="btn-primary login-btn" bindtap="handleLogin" loading="{{loading}}">微信一键登录</button>
+
+  <view class="tip">登录即代表同意《用户协议》与《隐私政策》</view>
+</view>

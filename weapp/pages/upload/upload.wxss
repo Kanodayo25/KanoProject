@@ -1,0 +1,141 @@
+.upload-page {
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 40rpx;
+}
+
+.card-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-desc {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+  margin-bottom: 32rpx;
+  line-height: 1.6;
+}
+
+/* 选择框 */
+.file-box {
+  display: flex;
+  align-items: center;
+  border: 2rpx dashed #c9cfff;
+  border-radius: 16rpx;
+  background: #f8f9ff;
+  padding: 36rpx 28rpx;
+  margin-bottom: 24rpx;
+}
+
+.file-icon {
+  font-size: 48rpx;
+  margin-right: 20rpx;
+}
+
+.file-name {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+  word-break: break-all;
+}
+
+.file-name.placeholder {
+  color: #aaa;
+}
+
+/* 文件列表 */
+.file-list {
+  margin-bottom: 24rpx;
+}
+
+.file-item {
+  background: #f8f9fc;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  margin-bottom: 16rpx;
+}
+
+.file-item-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-item-name {
+  flex: 1;
+  font-size: 26rpx;
+  color: #333;
+  word-break: break-all;
+  margin-right: 16rpx;
+}
+
+.file-item-size {
+  font-size: 22rpx;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.file-item-status {
+  font-size: 22rpx;
+  margin-top: 8rpx;
+}
+
+.file-item-status.pending { color: #999; }
+.file-item-status.uploading { color: #4a67ff; }
+.file-item-status.success { color: #34c759; }
+.file-item-status.fail { color: #ff3b30; }
+
+/* 进度条 */
+.progress {
+  height: 8rpx;
+  background: #e5e7eb;
+  border-radius: 4rpx;
+  margin-top: 12rpx;
+  overflow: hidden;
+}
+
+.progress-inner {
+  height: 100%;
+  background: #4a67ff;
+  border-radius: 4rpx;
+  transition: width 0.2s;
+}
+
+/* 结果 */
+.file-item-result {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #34c759;
+  line-height: 1.6;
+}
+
+.file-item-docid {
+  color: #4a67ff;
+  word-break: break-all;
+}
+
+/* 集合输入 */
+.collection-input {
+  height: 76rpx;
+  background: #f5f6fa;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 28rpx;
+  margin-bottom: 32rpx;
+}
+
+.btn-ghost {
+  margin-top: 24rpx;
+  background: #fff;
+  color: #4a67ff;
+  border: 2rpx solid #4a67ff;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+}

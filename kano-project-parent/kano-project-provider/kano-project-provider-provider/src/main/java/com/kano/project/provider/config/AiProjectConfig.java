@@ -30,6 +30,10 @@ public class AiProjectConfig {
     private String modelName;
     @Value("${model.base-url}")
     private String baseUrl;
+    @Value("${embedding.model.name}")
+    private String embeddingModelName;
+    @Value("${embedding.model.dimensions}")
+    private Integer dimensions;
 
     @Autowired
     private RedisChatMemoryStore redisChatMemoryStore;
@@ -69,9 +73,10 @@ public class AiProjectConfig {
     public EmbeddingModel embeddingModel() {
         return OpenAiEmbeddingModel.builder()
                 .apiKey(QwenApiKey)
-                .modelName("qwen3.7-text-embedding")
+                .modelName(embeddingModelName)
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(30))
+                .dimensions(dimensions)
                 .build();
     }
 

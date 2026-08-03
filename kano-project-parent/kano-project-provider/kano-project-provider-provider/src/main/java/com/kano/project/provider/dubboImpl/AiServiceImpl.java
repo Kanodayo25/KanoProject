@@ -41,4 +41,20 @@ public class AiServiceImpl implements AiService {
         return Result.success(answer);
     }
 
+    @Override
+    public Result<String> doChatWithRag(Long memoryId, String message, String collectionName, Integer topK) {
+        return doChatWithRag(memoryId, message, collectionName, topK, null);
+    }
+
+    @Override
+    public Result<String> doChatWithRag(Long memoryId, String message, String collectionName, Integer topK, String imageUrl) {
+        try {
+            String answer = chatService.doChatWithRag(memoryId, message, collectionName, topK, imageUrl);
+            return Result.success(answer);
+        } catch (Exception e) {
+            log.warn("知识库问答失败 memoryId={}, collectionName={}", memoryId, collectionName, e);
+            return Result.fail(e.getMessage());
+        }
+    }
+
 }

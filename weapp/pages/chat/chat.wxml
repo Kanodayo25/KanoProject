@@ -1,0 +1,54 @@
+<view class="chat-page">
+  <!-- RAG 参数栏 -->
+  <view class="param-bar">
+    <input class="param-input" placeholder="知识库集合" value="{{collectionName}}" bindinput="onCollectionInput" />
+    <picker class="param-picker" mode="selector" range="{{topKOptions}}" value="{{topKIndex}}" bindchange="onTopKChange">
+      <view class="picker-value">topK {{topKOptions[topKIndex]}}</view>
+    </picker>
+    <view class="clear-btn" bindtap="clearChat">清空</view>
+  </view>
+
+  <!-- 消息列表 -->
+  <scroll-view class="msg-list" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation>
+    <view class="empty" wx:if="{{messages.length === 0}}">
+      <view class="empty-icon">💬</view>
+      <view class="empty-text">基于知识库提问，AI 将检索资料后回答；可附带图片</view>
+    </view>
+
+    <view
+      wx:for="{{messages}}"
+      wx:key="index"
+      class="msg {{item.role === 'user' ? 'msg-user' : 'msg-ai'}}"
+    >
+      <view class="avatar">{{item.role === 'user' ? '我' : 'AI'}}</view>
+      <view class="bubble">
+        <image wx:if="{{item.image}}" class="bubble-img" src="{{item.image}}" mode="widthFix" />
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+
+    <view wx:if="{{thinking}}" class="msg msg-ai">
+      <view class="avatar">AI</view>
+      <view class="bubble typing">正在检索资料并思考…</view>
+    </view>
+    <view id="bottom"></view>
+  </scroll-view>
+
+  <!-- 输入栏 -->
+  <view class="input-bar">
+    <view class="attach-btn" bindtap="chooseImage">🖼️</view>
+    <view class="img-preview" wx:if="{{imagePath}}">
+      <image src="{{imagePath}}" mode="aspectFill" />
+      <view class="img-remove" bindtap="removeImage">×</view>
+    </view>
+    <input
+      class="input"
+      value="{{draft}}"
+      bindinput="onInput"
+      confirm-type="send"
+      bindconfirm="onSend"
+      placeholder="输入问题，回车发送"
+    />
+    <button class="send-btn" bindtap="onSend" disabled="{{sending || thinking}}">发送</button>
+  </view>
+</view>

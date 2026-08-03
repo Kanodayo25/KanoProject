@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/chat/chat",
+    "pages/upload/upload"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4a67ff",
+    "navigationBarTitleText": "公务员考试助手",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6fa"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#4a67ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "对话"
+      },
+      {
+        "pagePath": "pages/upload/upload",
+        "text": "上传"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

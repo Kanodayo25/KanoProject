@@ -1,0 +1,47 @@
+<view class="upload-page">
+  <view class="card">
+    <view class="card-title">上传学习资料</view>
+    <view class="card-desc">支持 txt / pdf / doc / docx 等格式，上传后自动解析、切分并向量化入库</view>
+
+    <!-- 文件选择 -->
+    <view class="file-box" bindtap="chooseFiles">
+      <view class="file-icon">📁</view>
+      <view class="file-name placeholder">点击选择文件（可多选，最多 9 个）</view>
+    </view>
+
+    <!-- 文件列表 -->
+    <view class="file-list" wx:if="{{files.length}}">
+      <view class="file-item" wx:for="{{files}}" wx:key="index">
+        <view class="file-item-main">
+          <view class="file-item-name">{{item.fileName}}</view>
+          <view class="file-item-size">{{item.fileSize}}</view>
+        </view>
+        <view class="file-item-status {{item.status}}">{{item.statusText}}</view>
+        <view class="progress" wx:if="{{item.uploading}}">
+          <view class="progress-inner" style="width: {{item.progress}}%"></view>
+        </view>
+        <view class="file-item-result" wx:if="{{item.result}}">
+          集合 {{item.result.collectionName}} · 分块 {{item.result.chunkCount}} 个
+          <view class="file-item-docid">文档ID {{item.result.documentId}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 集合名 -->
+    <input
+      class="collection-input"
+      placeholder="知识库集合名（留空用默认）"
+      value="{{collectionName}}"
+      bindinput="onCollectionInput"
+    />
+
+    <button
+      class="btn-primary"
+      bindtap="doUpload"
+      disabled="{{!files.length || uploading}}"
+    >{{uploading ? '上传中 ' + doneCount + '/' + files.length : '开始上传'}}</button>
+
+    <!-- 全部成功后去提问 -->
+    <button class="btn-ghost" wx:if="{{allDone}}" bindtap="goChat">全部完成，去提问 →</button>
+  </view>
+</view>

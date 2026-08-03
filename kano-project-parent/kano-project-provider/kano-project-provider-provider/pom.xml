@@ -219,6 +219,20 @@
             <artifactId>easyexcel</artifactId>
             <version>${easyexcel.version}</version>
         </dependency>
+        <!-- 版本冲突修复：easyexcel 传递依赖带入 commons-io 2.11，而 Tika 3.0 需要 >=2.16（UnsynchronizedByteArrayInputStream.builder()）。
+             显式声明直接依赖以覆盖旧版本，commons-io 2.x 向后兼容不影响 easyexcel -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
+        </dependency>
+        <!-- 版本冲突修复：kano-project-common 带入 gson 2.8.6，而 Tika 3.0 需要 >=2.8.9（ToNumberStrategy）。
+             显式声明直接依赖覆盖旧版本，gson 2.x 向后兼容 -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
 
         <!-- 腾讯云Cos -->
         <dependency>
