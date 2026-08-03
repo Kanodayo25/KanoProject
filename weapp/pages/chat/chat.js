@@ -1,5 +1,5 @@
-const { post } = require('../../utils/request')
-const { collectionName, baseUrl } = require('../../config')
+const { post, get } = require('../../utils/request')
+const { collectionName, baseUrl, openidWhitelist } = require('../../config')
 
 /**
  * 上传图片 → 返回可访问 URL（POST /troubleInfo/upload，后端已有接口，返回 COS URL）
@@ -39,7 +39,35 @@ Page({
     thinking: false,
     sending: false,
     scrollTo: '',
-    imagePath: '' // 待发送的图片本地路径
+    imagePath: '', // 待发送的图片本地路径
+    showAttach: false // 图片上传按钮是否可见（默认隐藏，仅 openid 白名单内显示）
+  },
+
+  onShow() {
+    this.resolveOpenid()
+  },
+
+  // 解析当前用户 openid，命中白名单才开放图片上传按钮
+  resolveOpenid() {
+    const openid = wx.getStorageSync('openid')
+    if (openid) {
+      this.applyWhitelist(openid)
+      return
+    }
+    // 无本地 openid：已登录则向后端取一次并缓存；未登录保持隐藏
+    const token = wx.getStorageSync('token')
+    if (!token) return
+    get('/auth/openid')
+      .then((oid) => {
+        wx.setStorageSync('openid', oid)
+        this.applyWhitelist(oid)
+      })
+      .catch(() => {})
+  },
+
+  applyWhitelist(openid) {
+    const showAttach = !!openid && openidWhitelist.indexOf(openid) !== -1
+    this.setData({ showAttach })
   },
 
   onCollectionInput(e) {

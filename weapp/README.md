@@ -44,3 +44,4 @@ weapp/
 - 会话记忆：启动时生成数字 `memoryId`（后端接口为 Long）存本地，多轮对话共用（对应后端 Redis 记忆）。
 - 上传仅支持文本类文件，与后端 `SupportedFileTypes` 白名单一致。
 - **对话附带图片**：小程序先调后端已有接口 `POST /troubleInfo/upload`（multipart `file`）上传图片拿到 URL，随 RAG 请求带 `imageUrl`；后端已在 RAG 链路消费该字段（有图时用 `UserMessage.from(TextContent, ImageContent)` 组装消息交给模型）。
+- **图片上传按钮默认隐藏**：对话页 🖼️ 按钮仅当用户 openid 在 `config.js` 的 `openidWhitelist` 白名单内才显示；openid 来源为 `GET /auth/openid`（需登录后才有 token 才能取到）。

@@ -11,6 +11,7 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -59,6 +60,15 @@ public class WechatAuthController {
             log.warn("微信登录失败 code={}", reqVO.getCode(), e);
             return Result.fail(e.getMessage());
         }
+    }
+
+    @ApiOperation("获取当前登录用户 openid（前端白名单判断用）")
+    @GetMapping("/openid")
+    public Result<String> openid() {
+        if (!StpUtil.isLogin()) {
+            return Result.fail("未登录");
+        }
+        return Result.success(StpUtil.getLoginId().toString());
     }
 
     /**

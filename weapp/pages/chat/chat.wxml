@@ -36,7 +36,7 @@
 
   <!-- 输入栏 -->
   <view class="input-bar">
-    <view class="attach-btn" bindtap="chooseImage">🖼️</view>
+    <view class="attach-btn" wx:if="{{showAttach}}" bindtap="chooseImage">🖼️</view>
     <view class="img-preview" wx:if="{{imagePath}}">
       <image src="{{imagePath}}" mode="aspectFill" />
       <view class="img-remove" bindtap="removeImage">×</view>
