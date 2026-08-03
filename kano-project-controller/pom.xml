@@ -108,6 +108,26 @@
             </exclusions>
         </dependency>
 
+        <!-- curator-x-discovery：Dubbo 3.x ZK registry 的 ServiceDiscovery 需要，否则启动报 NoClassDefFoundError -->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery</artifactId>
+            <version>${curator.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- Dubbo consumer：处理 @Reference / @DubboReference 注入 -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+
         <!--EasyExcel-->
         <dependency>
             <groupId>com.alibaba</groupId>

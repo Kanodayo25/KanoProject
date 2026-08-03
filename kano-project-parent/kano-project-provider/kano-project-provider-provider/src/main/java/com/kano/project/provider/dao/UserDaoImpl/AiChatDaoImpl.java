@@ -116,7 +116,7 @@ public class AiChatDaoImpl implements AiChatDao {
      */
     private String buildRagPrompt(List<DocumentChunkVO> chunks) {
         if (chunks == null || chunks.isEmpty()) {
-            return "你是一个公务员考试专家。资料库中未检索到相关内容，请直接告诉用户“未检索到相关资料”，不要编造。";
+            return "你是一个公务员考试专家。资料库中未检索到相关内容，请直接线上搜索相关资料，如果没有找到相关资料，如实告诉用户，不要编造。";
         }
         StringBuilder context = new StringBuilder();
         for (DocumentChunkVO chunk : chunks) {
@@ -141,7 +141,7 @@ public class AiChatDaoImpl implements AiChatDao {
         } catch (IOException e) {
             log.warn("读取 RAG system 提示词失败: {}", ragSystemPromptResource, e);
             return "你是一个公务员考试专家。请严格依据下面的资料回答用户问题；"
-                    + "资料中没有的内容，请明确说明“资料中未找到”，不要编造。";
+                    + "资料中没有的内容，请直接线上搜索相关资料，如果没有找到相关资料，如实告诉用户，不要编造。";
         }
     }
 }
