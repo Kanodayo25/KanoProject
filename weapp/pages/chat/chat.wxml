@@ -12,7 +12,7 @@
   <scroll-view class="msg-list" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation>
     <view class="empty" wx:if="{{messages.length === 0}}">
       <view class="empty-icon">💬</view>
-      <view class="empty-text">基于知识库提问，AI 将检索资料后回答；可附带图片</view>
+      <view class="empty-text">能回答就回答，不能回答就回答不会捏</view>
     </view>
 
     <view
@@ -23,7 +23,9 @@
       <view class="avatar">{{item.role === 'user' ? '我' : 'AI'}}</view>
       <view class="bubble">
         <image wx:if="{{item.image}}" class="bubble-img" src="{{item.image}}" mode="widthFix" />
-        <view>{{item.content}}</view>
+        <!-- AI 回答走 rich-text 渲染 Markdown；用户消息无 html 字段，走纯文本 -->
+        <rich-text wx:if="{{item.html}}" nodes="{{item.html}}"></rich-text>
+        <view wx:else>{{item.content}}</view>
       </view>
     </view>
 
@@ -47,7 +49,7 @@
       bindinput="onInput"
       confirm-type="send"
       bindconfirm="onSend"
-      placeholder="输入问题，回车发送"
+      placeholder="输入问题"
     />
     <button class="send-btn" bindtap="onSend" disabled="{{sending || thinking}}">发送</button>
   </view>

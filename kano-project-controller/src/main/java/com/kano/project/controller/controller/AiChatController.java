@@ -25,7 +25,7 @@ import service.AiService;
 @Slf4j
 public class AiChatController {
 
-    @Reference
+    @Reference(timeout = 120000)
     private AiService aiService;
 
     @ApiOperation("知识库问答（RAG），可附带图片 imageUrl")

@@ -1,5 +1,6 @@
 const { post, get } = require('../../utils/request')
 const { collectionName, baseUrl, openidWhitelist } = require('../../config')
+const { mdToHtml } = require('../../utils/markdown')
 
 /**
  * 上传图片 → 返回可访问 URL（POST /troubleInfo/upload，后端已有接口，返回 COS URL）
@@ -132,15 +133,17 @@ Page({
         imageUrl: imageUrl || ''
       })
         .then((data) => {
+          const content = data || '（无返回）'
           this.setData({
-            messages: [...this.data.messages, { role: 'ai', content: data || '（无返回）' }],
+            messages: [...this.data.messages, { role: 'ai', content, html: mdToHtml(content) }],
             scrollTo: 'bottom'
           })
         })
         .catch((e) => {
           wx.showToast({ title: (e && e.msg) || '请求失败', icon: 'none' })
+          const content = '请求失败，请稍后重试'
           this.setData({
-            messages: [...this.data.messages, { role: 'ai', content: '请求失败，请稍后重试' }],
+            messages: [...this.data.messages, { role: 'ai', content, html: mdToHtml(content) }],
             scrollTo: 'bottom'
           })
         })

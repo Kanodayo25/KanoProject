@@ -77,6 +77,8 @@ public class AiProjectConfig {
                 .baseUrl(baseUrl)
                 .timeout(Duration.ofSeconds(30))
                 .dimensions(dimensions)
+                // 通义/百炼嵌入接口单次最多 20 条，langchain4j 默认 64 会超限
+                .maxSegmentsPerBatch(20)
                 .build();
     }
 
