@@ -48,6 +48,7 @@ public class AiServiceImpl implements AiService {
 
     @Override
     public Result<String> doChatWithRag(Long memoryId, String message, String collectionName, Integer topK, String imageUrl) {
+        log.info("对话入参：memoryId:{},message:{}", memoryId, message);
         try {
             String answer = chatService.doChatWithRag(memoryId, message, collectionName, topK, imageUrl);
             return Result.success(answer);

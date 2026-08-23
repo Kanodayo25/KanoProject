@@ -31,7 +31,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.17.1",
+  "libVersion": "3.17.0",
   "appid": "wxf36f33fac778ed76",
   "projectname": "kano-weapp",
   "condition": {},

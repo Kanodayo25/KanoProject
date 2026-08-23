@@ -107,7 +107,7 @@ public class AiChatDaoImpl implements AiChatDao {
         persisted.add(userMessage);
         persisted.add(res.content());
         memoryStore.updateMessages(memoryId, persisted);
-
+        log.info("反参回答:{}",res.content().text());
         return res.content().text();
     }
 
