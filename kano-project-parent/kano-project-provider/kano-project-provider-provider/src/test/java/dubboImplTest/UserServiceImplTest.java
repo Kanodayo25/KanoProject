@@ -36,8 +36,8 @@ public class UserServiceImplTest {
     @Test
     public void insertTest(){
         UserReqDTO reqDTO = new UserReqDTO();
-        reqDTO.setUserName("ca");
-        reqDTO.setUserAccount("ylt8410407");
+        reqDTO.setUserName("admin");
+        reqDTO.setUserAccount("1776371121");
         reqDTO.setUserPassword("123456");
 
         ApplicationContext applicationContext = SpringApplicationHelper.getApplicationContext();

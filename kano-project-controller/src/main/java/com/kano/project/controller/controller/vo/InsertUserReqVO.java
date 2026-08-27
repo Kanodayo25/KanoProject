@@ -28,4 +28,9 @@ public class InsertUserReqVO implements Serializable {
      * 密码
      */
     private String userPassword;
+
+    /**
+     * 角色（0：管理员 1：用户，不传默认 1：用户）
+     */
+    private Boolean role;
 }

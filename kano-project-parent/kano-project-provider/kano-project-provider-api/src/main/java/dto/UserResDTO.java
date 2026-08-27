@@ -15,7 +15,7 @@ public class UserResDTO implements Serializable {
     /**
      * 主键id
      */
-    private Long userid;
+    private Long userId;
     /**
      * 用户名
      */
@@ -30,6 +30,11 @@ public class UserResDTO implements Serializable {
      * 密码
      */
     private String userPassword;
+
+    /**
+     * 角色（0：管理员 1：用户)
+     */
+    private Boolean role;
 
     /**
      * 是否删除

@@ -31,6 +31,11 @@ public class UserReqDTO implements Serializable {
     private String userPassword;
 
     /**
+     * 角色（0：管理员 1：用户)
+     */
+    private Boolean role;
+
+    /**
      * 是否删除
      */
     private Boolean del;

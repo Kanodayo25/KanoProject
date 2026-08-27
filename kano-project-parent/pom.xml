@@ -55,7 +55,7 @@
         <!-- Spring Boot 3.x 新依赖 -->
         <springdoc.version>2.6.0</springdoc.version>
         <curator.version>5.6.0</curator.version>
-        <sa-token.version>1.39.0</sa-token.version>
+        <sa-token.version>1.46.0</sa-token.version>
         <redisson.version>3.33.0</redisson.version>
     </properties>
 

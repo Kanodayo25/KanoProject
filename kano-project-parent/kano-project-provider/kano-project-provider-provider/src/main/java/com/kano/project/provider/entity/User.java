@@ -50,16 +50,16 @@ public class User implements Serializable {
     private String userPassword;
 
     /**
+     * 角色（0：管理员 1：用户)
+     */
+    @TableField(value = "role")
+    private Boolean role;
+
+    /**
      * 是否删除
      */
     @TableField(value = "del")
     private Boolean del;
-
-    /**
-     * 是否登录
-     */
-    @TableField(value = "is_login")
-    private Boolean isLogin;
 
     /**
      * 创建时间
