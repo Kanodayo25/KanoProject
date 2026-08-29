@@ -34,12 +34,12 @@ public class UserController {
     private UserService userService;
 
 
-    @ApiOperation("新增用户（管理员）")
+    @ApiOperation("新增用户（管理员）/ 注册（未登录调用视为开放注册，强制普通用户）")
     @PostMapping("/insertUser")
     public Result<Boolean> insertUser(@RequestBody @Valid InsertUserReqVO reqVO){
-        Result<Boolean> auth = checkAdmin();
-        if (!auth.isSuccess()) {
-            return Result.fail(auth.getMsg());
+        // 未登录或非管理员：注册场景，强制普通用户，防止越权注册管理员；管理员新增用户按入参角色
+        if (!isAdmin()) {
+            reqVO.setRole(Boolean.TRUE);
         }
         UserReqDTO reqDTO = new UserReqDTO();
         BeanUtils.copyProperties(reqVO,reqDTO);
@@ -68,22 +68,52 @@ public class UserController {
         if (!auth.isSuccess()) {
             return Result.fail(auth.getMsg());
         }
-        return userService.updateUserRole(reqVO.getUserId(), reqVO.getRole());
+        Long userId = parseUserId(reqVO.getUserId());
+        if (userId == null) {
+            return Result.fail("用户ID格式错误");
+        }
+        return userService.updateUserRole(userId, reqVO.getRole());
     }
 
     @ApiOperation("删除用户（管理员，软删并踢下线）")
     @PostMapping("/delete")
-    public Result<Boolean> delete(@RequestParam("userId") Long userId) {
+    public Result<Boolean> delete(@RequestParam("userId") String userId) {
         Result<Boolean> auth = checkAdmin();
         if (!auth.isSuccess()) {
             return Result.fail(auth.getMsg());
         }
+        Long id = parseUserId(userId);
+        if (id == null) {
+            return Result.fail("用户ID格式错误");
+        }
         // 1. 软删
-        userService.deleteUser(userId);
+        userService.deleteUser(id);
         // 2. 清除 Redis 登录信息并踢下线
-        userService.logout(userId);
-        StpUtil.kickout(userId);
+        userService.logout(id);
+        StpUtil.kickout(id);
         return Result.success(Boolean.TRUE);
+    }
+
+    /**
+     * 前端传 userId 为 String（Long 序列化输出避免 JS 精度丢失），后端负责转 Long
+     */
+    private Long parseUserId(String userId) {
+        try {
+            return Long.parseLong(userId);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
+    /**
+     * 是否已登录管理员（未登录返回 false；供 insertUser 区分开放注册/管理员新增两种场景）
+     */
+    private boolean isAdmin() {
+        if (!StpUtil.isLogin()) {
+            return false;
+        }
+        Result<UserResDTO> info = userService.getLoginUserInfo(StpUtil.getLoginIdAsLong());
+        return info.isSuccess() && Boolean.FALSE.equals(info.getData().getRole());
     }
 
     /**

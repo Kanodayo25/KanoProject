@@ -65,11 +65,8 @@ public class UserServiceImpl implements UserService {
             return Result.fail("用户账号密码不正确");
         }
         User user = userList.get(0);
-        // 已登录（Redis 中 2 小时内仍有登录信息）则拒绝重复登录
-        if(redisUtils.hasKey(LOGIN_USER_KEY + user.getUserId())){
-            return Result.fail("用户已登录");
-        }
-        // 登录用户信息写入 Redis，有效期 2 小时（登录状态由 Redis 承载，不落库）
+        // 登录用户信息写入 Redis，有效期 2 小时（登录状态由 Redis 承载，不落库）。
+        // 不再拦截重复登录：同端互斥由 sa-token is-concurrent=false 处理，新登录顶掉旧会话并重签 Token
         redisUtils.set(LOGIN_USER_KEY + user.getUserId(), buildLoginInfo(user), LOGIN_USER_TTL);
         return Result.success(DozerUtils.map(user, UserResDTO.class));
     }

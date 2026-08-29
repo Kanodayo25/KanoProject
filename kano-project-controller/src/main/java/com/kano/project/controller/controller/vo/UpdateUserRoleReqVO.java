@@ -13,8 +13,11 @@ public class UpdateUserRoleReqVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 用户ID（前端传 String，Long 序列化后避免 JS 精度丢失，由后端负责转 Long）
+     */
     @NotNull(message = "用户ID不能为空")
-    private Long userId;
+    private String userId;
 
     /**
      * 角色（0：管理员 1：用户)

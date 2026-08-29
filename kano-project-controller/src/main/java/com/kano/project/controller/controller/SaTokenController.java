@@ -38,10 +38,10 @@ public class SaTokenController {
         // 不向客户端回传密码
         userResDTO.setUserPassword(null);
         // 2. 校验通过，以用户 ID 作为登录账号签发 Token（登录用户信息已由 provider 写入 Redis，有效期 2 小时）
+        //    注意：不再把 UserResDTO 存入 SaSession——用户信息统一从 Redis login:user:{userId} 读取；
+        //    自定义对象存入 SaSession 后，同端互斥触发顶下线时会因 Jackson PolymorphicTypeValidator 反序列化失败
         StpUtil.login(userResDTO.getUserId());
-        // 3. 会话管理：将登录用户写入当前会话（SaSession），供本请求上下文后续读取
-        StpUtil.getSession().set("loginUser", userResDTO);
-        // 4. 返回 token + 用户实体。token 直接放响应体（小程序无 cookie、响应头读取不可靠，
+        // 3. 返回 token + 用户实体。token 直接放响应体（小程序无 cookie、响应头读取不可靠，
         //    正文返回最稳妥；响应头 satoken 仍由 Sa-Token 自动写入，浏览器端调用不受影响）
         AccountLoginResVO resVO = new AccountLoginResVO();
         resVO.setToken(StpUtil.getTokenValue());

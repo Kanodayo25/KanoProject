@@ -3,14 +3,12 @@ package dubboImplTest;
 import com.kano.project.common.filter.MybatisPlusSqlFilter;
 import com.kano.project.common.helper.SpringApplicationHelper;
 import com.kano.project.common.model.Result;
-import com.kano.project.common.utils.Md5Utils;
 import com.kano.project.provider.KanoProjectProviderApplication;
 import com.kano.project.provider.dubboImpl.UserServiceImpl;
 import dto.UserReqDTO;
 import dto.UserResDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -36,9 +34,10 @@ public class UserServiceImplTest {
     @Test
     public void insertTest(){
         UserReqDTO reqDTO = new UserReqDTO();
-        reqDTO.setUserName("admin");
-        reqDTO.setUserAccount("1776371121");
-        reqDTO.setUserPassword("123456");
+        reqDTO.setUserName("user1");
+        reqDTO.setUserAccount("1776371122");
+        reqDTO.setUserPassword("1");
+        reqDTO.setRole(true);
 
         ApplicationContext applicationContext = SpringApplicationHelper.getApplicationContext();
         MybatisPlusSqlFilter bean = applicationContext.getBean(MybatisPlusSqlFilter.class);

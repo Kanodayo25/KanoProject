@@ -1,5 +1,7 @@
 package dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,8 +15,9 @@ import java.time.LocalDateTime;
 public class UserResDTO implements Serializable {
 
     /**
-     * 主键id
+     * 主键id（Long 序列化为 String，避免前端 JS 大数精度丢失）
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long userId;
     /**
      * 用户名

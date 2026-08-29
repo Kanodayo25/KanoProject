@@ -1,9 +1,9 @@
 # =====================================================
-# kano-project-provider 镜像（部署于 Ubuntu 服务器）
-# 构建（把 Dockerfile 与 jar 放在同一目录 /opt/App/provider 下执行）：
-#   docker build -t kano-provider:1.0.0 .
-# 运行（推荐 host 网络，Dubbo 注册地址无需特殊处理）：
-#   docker run -d --name kano-provider --network=host --restart=always kano-provider:1.0.0
+# kano-project-controller 镜像（部署于 Ubuntu 服务器）
+# 构建（在 kano-project-controller 目录下执行）：
+#   docker build -t kano-controller:1.0.0 .
+# 运行：
+#   docker run -d --name kano-controller --network=host --restart=always kano-controller:1.0.0
 # =====================================================
 
 # JRE 17 + Ubuntu 22.04 (jammy)：openjdk 官方镜像已停止维护，
@@ -26,21 +26,21 @@ RUN groupadd -r kano && useradd -r -g kano kano \
     && mkdir -p /home/kano \
     && chown kano:kano /home/kano
 
-# 拷贝打包好的 jar（与 Dockerfile 同目录，即服务器上的 /opt/App/provider/）
-ARG JAR_FILE=kano-project-provider-provider-1.0.0-SNAPSHOT.jar
-COPY --chown=kano:kano ${JAR_FILE} /app/kano-provider.jar
+# 拷贝打包好的 jar（先本地 mvn package，或直接把 jar 上传到 target/ 目录）
+ARG JAR_FILE=kano-project-controller-1.0.0-SNAPSHOT.jar
+COPY --chown=kano:kano ${JAR_FILE} /app/kano-controller.jar
 
 WORKDIR /app
-# /app 由 WORKDIR 以 root 创建，改为 kano 所有，否则日志文件 app.log 写不进去
+# /app 由 WORKDIR 以 root 创建，改为 kano 所有，否则日志文件 controller.log 写不进去
 RUN chown kano:kano /app
 
-# 应用端口 8081 + Dubbo 服务端口 20880 + Dubbo QoS 端口 22222
-EXPOSE 8081 20880 22222
+# 应用端口（application.properties 中 server.port=8099，旧版 8081 是错的）
+EXPOSE 8099
 
 # 健康检查：TCP 探测应用端口（Spring Boot 启动慢，start-period 放宽到 120s）
 HEALTHCHECK --interval=30s --timeout=5s --start-period=120s --retries=3 \
-    CMD bash -c 'exec 3<>/dev/tcp/127.0.0.1/8081'
+    CMD bash -c 'exec 3<>/dev/tcp/127.0.0.1/8099'
 
 USER kano
 
-ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar /app/kano-provider.jar"]
+ENTRYPOINT ["sh", "-c", "exec java $JAVA_OPTS -jar /app/kano-controller.jar"]
